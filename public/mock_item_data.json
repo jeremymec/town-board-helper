@@ -1,0 +1,12 @@
+[
+    {
+    "name": "Apple",
+    "id": "applet1",
+    "categories": ["Tier 5 Fruits", "Cooked Fruit", "Raw Foods", "Tier 5 Raw Foods"]
+    },
+    {
+        "name": "Apple Pie",
+        "id": "fooddexfoct2",
+        "categories": []
+    }
+]

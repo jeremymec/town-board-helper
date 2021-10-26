@@ -1,0 +1,39 @@
+@use 'components/app/app.scss';
+@use 'components/item/item.scss';
+@use 'components/item_header/item_header.scss';
+@use 'components/item_image/item_image.scss';
+@use 'components/recipe_info/recipe_info.scss';
+@use 'components/recipe_picker/recipe_picker.scss';
+
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
+
+
+#body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #292f36;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10vh;
+}
+
+.itemName {
+    padding-left: 1vh;
+    font-size: 4vh;
+    color: lightgrey;
+    /* font-family: 'IM Fell DW Pica'; */
+}
+
+.recipe {
+    padding-top: 15%;
+}
+
+.recipeText {
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    color: lightgrey;
+}
