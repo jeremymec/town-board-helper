@@ -4,6 +4,8 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import Collaspe from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 
 import ItemImage from '../item_image/item_image';
 import { ItemModel } from "../../services/item_service";
@@ -14,17 +16,17 @@ interface ItemProps {
 }
 
 function Item(props: ItemProps) {
-    
+
     const [recipe, setRecipe] = useState<RecipeModel>();
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
-            get_recipe_from_output_name(props.item.name).then((recipe) => {
-                setRecipe(recipe);
-          });
-      }, [props.item]
+        get_recipe_from_output_name(props.item.name).then((recipe) => {
+            setRecipe(recipe);
+        });
+    }, [props.item]
     );
-    
+
     const handleClick = () => {
         setOpen(!open);
     };
@@ -35,15 +37,16 @@ function Item(props: ItemProps) {
                 <ListItem>
                     <ItemImage item={props.item}></ItemImage>
                     <Typography>Test</Typography>
-                    <Collaspe in={open}>
-                        <List>
-                            <ListItem>
-                                <Typography>Hey</Typography>
-                            </ListItem>
-                        </List>
-                    </Collaspe>
+                    {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItem>
             </ListItemButton>
+            {recipe && <Collaspe in={open}>
+                <List disablePadding>
+                    <ListItem>
+                        <Item item={recipe.components[0]}></Item>
+                    </ListItem>
+                </List>
+            </Collaspe>}
         </List>
     );
 

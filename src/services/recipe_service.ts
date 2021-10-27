@@ -1,9 +1,9 @@
+import { ItemModel } from './item_service';
 import { get_recipe_data } from './data_service';
 
 export interface RecipeModel {
-    output: string,
-    id: string,
-    components: string[]
+    output: ItemModel,
+    components: ItemModel[]
 }
 
 export async function get_recipes(): Promise<RecipeModel[]> {
@@ -15,10 +15,8 @@ export async function get_recipes(): Promise<RecipeModel[]> {
 export async function get_recipe_from_output_name(output_name: string): Promise<RecipeModel> {
     const recipes = await get_recipe_data();
 
-    const result = recipes.find(recipe => recipe.output === output_name);
-
-    console.log("result", result)
-
+    const result = recipes.find(recipe => recipe.output.name === output_name);
+    
     if (result) { return result; }
     else {
         throw new Error("Error - could not find a recipe with that name");

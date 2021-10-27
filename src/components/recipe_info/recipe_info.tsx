@@ -30,10 +30,7 @@ function RecipeInfo(props: RecipeInfoProps) {
 
   useEffect(() => {
     if (recipe) {
-      get_item_from_name(recipe.output).then((item) => {
-        console.log("Output item is", item);
-        setOutputItem(item);
-      })
+      setOutputItem(recipe.output)
     }
   }, [recipe]);
 

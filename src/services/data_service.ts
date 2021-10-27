@@ -2,7 +2,7 @@ import item_data from '../../public/mock_item_data.json';
 import recipe_data from '../../public/mock_recipe_data.json';
 
 import { RecipeModel } from './recipe_service';
-import { ItemModel } from './item_service';
+import { ItemModel, get_item_from_name } from './item_service';
 
 export async function get_item_data(): Promise<ItemModel[]> {
 
@@ -25,5 +25,11 @@ export async function get_item_data(): Promise<ItemModel[]> {
 
 export async function get_recipe_data(): Promise<RecipeModel[]> {
 
-    return recipe_data;
+    let result = Promise.all(recipe_data.map(async data => ({
+            output: await get_item_from_name(data.output),
+            components: await Promise.all(data.components.map(async component => await get_item_from_name(component)))
+        })
+    ))
+
+    return result;
 }
