@@ -1,6 +1,10 @@
 [
     {
         "output": "Apple Pie",
-        "components": ["Apple"]
+        "components": ["Pastry Crust", "Apple", "Sugar", "Cinnamon"]
+    },
+    {
+        "output": "Pastry Crust",
+        "components": ["Flour", "Salt", "Water"]
     }
 ]

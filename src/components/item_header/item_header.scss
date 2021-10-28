@@ -1,4 +1,24 @@
 .itemHeaderContainer {
+
     display: flex;
     flex-direction: row;
+    flex-basis: auto;
+    justify-content: center;
+}
+
+.itemHeaderName {
+
+    padding-left: 1vh;
+    font-size: 4vh;
+    color: lightgrey;
+    font-family: 'IM Fell DW Pica';
+}
+
+.itemHeaderQuantity {
+    font-size: 3.5vh;
+}
+
+.itemHeaderQuantityContainer {
+    padding-left: 1vh;
+    max-width: 7vh;
 }

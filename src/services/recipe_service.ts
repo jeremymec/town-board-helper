@@ -12,14 +12,15 @@ export async function get_recipes(): Promise<RecipeModel[]> {
     return recipes;
 }
 
-export async function get_recipe_from_output_name(output_name: string): Promise<RecipeModel> {
+export async function get_recipe_from_output_name(output_name: string): Promise<RecipeModel | null> {
     const recipes = await get_recipe_data();
 
     const result = recipes.find(recipe => recipe.output.name === output_name);
     
     if (result) { return result; }
     else {
-        throw new Error("Error - could not find a recipe with that name");
+        // throw new Error("Error - could not find a recipe with that name");
+        return null;
     }
 }
 

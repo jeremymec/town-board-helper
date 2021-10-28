@@ -8,5 +8,35 @@
         "name": "Apple Pie",
         "id": "fooddexfoct2",
         "categories": []
+    },
+    {
+        "name": "Pastry Crust",
+        "id": "pastrycrustt1",
+        "categories": ["Raw Foods", "Tier 2 Raw Foods"]
+    },
+    {
+        "name": "Flour",
+        "id": "flourt1",
+        "categories": []
+    },
+    {
+        "name": "Salt",
+        "id": "saltt1",
+        "categories": []
+    },
+    {
+        "name": "Water",
+        "id": "watert1",
+        "categories": []
+    },
+    {
+        "name": "Sugar",
+        "id": "sugart1",
+        "categories": []
+    },
+    {
+        "name": "Cinnamon",
+        "id": "cinnamont1",
+        "categories": []
     }
 ]

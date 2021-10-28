@@ -17,7 +17,7 @@ interface RecipeInfoProps {
 
 function RecipeInfo(props: RecipeInfoProps) {
   
-  const [recipe, setRecipe] = useState<RecipeModel>();
+  const [recipe, setRecipe] = useState<RecipeModel | null>();
   const [outputItem, setOutputItem] = useState<ItemModel>();
 
   useEffect(() => {

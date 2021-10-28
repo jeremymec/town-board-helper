@@ -15,7 +15,7 @@ function RecipePicker(props: RecipePickerProps) {
 
     useEffect(() => {
         const names = props.recipes.map((recipe) => {
-            return recipe.output
+            return recipe.output.name
         });
         setRecipeNames(names);
     }, [props.recipes])

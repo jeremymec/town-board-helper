@@ -6,6 +6,8 @@ import Collaspe from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
 
 import ItemImage from '../item_image/item_image';
 import { ItemModel } from "../../services/item_service";
@@ -17,12 +19,12 @@ interface ItemProps {
 
 function Item(props: ItemProps) {
 
-    const [recipe, setRecipe] = useState<RecipeModel>();
+    const [recipe, setRecipe] = useState<RecipeModel | null>(null);
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
         get_recipe_from_output_name(props.item.name).then((recipe) => {
-            setRecipe(recipe);
+                setRecipe(recipe);
         });
     }, [props.item]
     );
@@ -32,19 +34,25 @@ function Item(props: ItemProps) {
     };
 
     return (
-        <List>
+        <List disablePadding>
             <ListItemButton onClick={handleClick}>
                 <ListItem>
-                    <ItemImage item={props.item}></ItemImage>
-                    <Typography>Test</Typography>
-                    {open ? <ExpandLess /> : <ExpandMore />}
+                    <ListItemAvatar>
+                        <ItemImage item={props.item}></ItemImage>
+                    </ListItemAvatar>
+                    <ListItemText>{props.item.name}</ListItemText>
+                    {recipe && (open ? <ExpandLess /> : <ExpandMore />)}
                 </ListItem>
             </ListItemButton>
             {recipe && <Collaspe in={open}>
                 <List disablePadding>
-                    <ListItem>
-                        <Item item={recipe.components[0]}></Item>
-                    </ListItem>
+                    {recipe.components.map((component, key) => {
+                        return (
+                            <ListItem key={key}>
+                                <Item item={component} />
+                            </ListItem>
+                        )
+                    })}
                 </List>
             </Collaspe>}
         </List>
