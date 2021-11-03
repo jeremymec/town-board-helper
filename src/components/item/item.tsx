@@ -42,7 +42,7 @@ function Item(props: ItemProps) {
                         <ItemImage item={props.item}></ItemImage>
                     </ListItemAvatar>
                     <ListItemText>{props.item.name}</ListItemText>
-                    <ListItemText>{props.quantity}</ListItemText>
+                    <ListItemText>&nbsp;&nbsp;x{props.quantity}</ListItemText>
                     {recipe && (open ? <ExpandLess /> : <ExpandMore />)}
                 </ListItem>
             </ListItemButton>
@@ -51,7 +51,7 @@ function Item(props: ItemProps) {
                     {recipe.components.map((component, key) => {
                         return (
                             <ListItem key={key}>
-                                <Item item={component.item} quantity={component.quantity} />
+                                <Item item={component.item} quantity={component.quantity * props.quantity} />
                             </ListItem>
                         )
                     })}

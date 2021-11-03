@@ -12,13 +12,14 @@ import ItemHeader from "../item_header/item_header";
 import Item from "../item/item";
 
 interface RecipeInfoProps {
-  recipeOutput: string | null;
+  recipeOutput: string | null
 }
 
 function RecipeInfo(props: RecipeInfoProps) {
   
   const [recipe, setRecipe] = useState<RecipeModel | null>();
   const [outputItem, setOutputItem] = useState<ItemModel>();
+  const [quantity, setQuantity] = useState<number>(1);
 
   useEffect(() => {
     if (props.recipeOutput) {
@@ -37,8 +38,8 @@ function RecipeInfo(props: RecipeInfoProps) {
   return (
     (recipe && outputItem ?
       <div className="itemInfo">
-        <ItemHeader item={outputItem} />
-        <Item item={outputItem} quantity={1} />
+        <ItemHeader item={outputItem} quantity={quantity} setQuantity={setQuantity} />
+        <Item item={outputItem} quantity={quantity} />
       </div>
       :
       <div className="itemInfo" />

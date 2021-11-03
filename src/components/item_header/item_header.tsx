@@ -6,12 +6,12 @@ import React, { useState } from "react";
 import { ItemModel } from "../../services/item_service";
 
 interface ItemHeaderProps {
-    item: ItemModel
+    item: ItemModel,
+    quantity: number,
+    setQuantity: React.Dispatch<React.SetStateAction<number>>
 }
 
 function ItemHeader(props: ItemHeaderProps) {
-
-    const [quantity, setQuantity] = useState<number>(1);
 
     const inputProps: InputBaseComponentProps = {
         style: {fontSize: 40},
@@ -20,12 +20,12 @@ function ItemHeader(props: ItemHeaderProps) {
     }
 
     const handleQuantityChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        if (event.target.value === '') { setQuantity(0)}
+        if (event.target.value === '') { props.setQuantity(0)}
 
         const updatedQuantity = Number(event.target.value)
         
         if (!isNaN(updatedQuantity) && updatedQuantity > 0) {
-            setQuantity(updatedQuantity);
+            props.setQuantity(updatedQuantity);
         }
 
     }
@@ -35,7 +35,7 @@ function ItemHeader(props: ItemHeaderProps) {
             {/* {<img className="itemImage" src={`${props.item?.id}.png`}></img>} */}
             <Typography className="itemHeaderName">{props.item?.name} &nbsp;&nbsp;x</Typography>
             <div className="itemHeaderQuantityContainer">
-                <TextField inputProps={inputProps} fullWidth={true} size={'small'} value={quantity} onChange={handleQuantityChange}></TextField>
+                <TextField inputProps={inputProps} fullWidth={true} size={'small'} value={props.quantity} onChange={handleQuantityChange}></TextField>
             </div>
         </div>
     );
