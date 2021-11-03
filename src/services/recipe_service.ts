@@ -3,7 +3,12 @@ import { get_recipe_data } from './data_service';
 
 export interface RecipeModel {
     output: ItemModel,
-    components: ItemModel[]
+    components: RecipeItem[]
+}
+
+export interface RecipeItem {
+    item: ItemModel,
+    quantity: number
 }
 
 export async function get_recipes(): Promise<RecipeModel[]> {

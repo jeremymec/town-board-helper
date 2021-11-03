@@ -38,7 +38,7 @@ function RecipeInfo(props: RecipeInfoProps) {
     (recipe && outputItem ?
       <div className="itemInfo">
         <ItemHeader item={outputItem} />
-        <Item item={outputItem} />
+        <Item item={outputItem} quantity={1} />
       </div>
       :
       <div className="itemInfo" />

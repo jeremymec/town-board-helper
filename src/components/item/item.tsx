@@ -14,7 +14,8 @@ import { ItemModel } from "../../services/item_service";
 import { RecipeModel, get_recipe_from_output_name } from "../../services/recipe_service";
 
 interface ItemProps {
-    item: ItemModel
+    item: ItemModel,
+    quantity: number
 }
 
 function Item(props: ItemProps) {
@@ -41,6 +42,7 @@ function Item(props: ItemProps) {
                         <ItemImage item={props.item}></ItemImage>
                     </ListItemAvatar>
                     <ListItemText>{props.item.name}</ListItemText>
+                    <ListItemText>{props.quantity}</ListItemText>
                     {recipe && (open ? <ExpandLess /> : <ExpandMore />)}
                 </ListItem>
             </ListItemButton>
@@ -49,7 +51,7 @@ function Item(props: ItemProps) {
                     {recipe.components.map((component, key) => {
                         return (
                             <ListItem key={key}>
-                                <Item item={component} />
+                                <Item item={component.item} quantity={component.quantity} />
                             </ListItem>
                         )
                     })}

@@ -1,7 +1,7 @@
 [
     {
         "output": "Apple Pie",
-        "components": ["Pastry Crust", "Apple", "Sugar", "Cinnamon"]
+        "components": ["Pastry Crust", "Apple", "Sugar", "Cinnamon", "Apple"]
     },
     {
         "output": "Pastry Crust",

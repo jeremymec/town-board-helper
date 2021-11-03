@@ -27,7 +27,12 @@ export async function get_recipe_data(): Promise<RecipeModel[]> {
 
     let result = Promise.all(recipe_data.map(async data => ({
             output: await get_item_from_name(data.output),
-            components: await Promise.all(data.components.map(async component => await get_item_from_name(component)))
+            components: await Promise.all([...Array.from(new Set(data.components))].map(async component => {
+                return {
+                    item: await get_item_from_name(component),
+                    quantity: data.components.filter(otherComponent => otherComponent === component).length
+                } 
+            }))
         })
     ))
 
