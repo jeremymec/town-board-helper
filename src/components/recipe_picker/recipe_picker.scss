@@ -1,4 +1,9 @@
-.itemSelect {
+#recipePicker {
     width: 35%;
     padding-top: 10vh;
+    display: inline-flex;
+}
+
+.itemSelect {
+    width: 90%;
 }

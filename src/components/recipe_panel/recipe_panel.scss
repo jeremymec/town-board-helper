@@ -1,0 +1,19 @@
+#recipePanel {
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#panelItem {
+    margin: 3vh;
+    padding: 2vh;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: darkgrey;
+}
+
+#deleteIcon {
+    background-color: red;
+    margin: -1.5vh;
+    margin-top: -3.5vh;
+}
