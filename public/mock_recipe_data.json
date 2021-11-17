@@ -1,10 +1,17 @@
 [
     {
         "output": "Apple Pie",
-        "components": ["Pastry Crust", "Apple", "Sugar", "Cinnamon", "Apple"]
+        "components": ["Pastry Crust", "Apple", "Sugar", "Cinnamon", "Apple"],
+        "ingredient_types": []
     },
     {
         "output": "Pastry Crust",
-        "components": ["Flour", "Salt", "Water"]
+        "components": ["Flour", "Salt", "Water"],
+        "ingredient_types": []
+    },
+    {
+        "output": "Light Ration",
+        "components": [],
+        "ingredient_types": ["Tier 1 Raw Foods"]
     }
 ]

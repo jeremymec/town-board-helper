@@ -16,7 +16,8 @@ export async function get_item_from_name(item_name: string): Promise<ItemModel> 
     if (item) {
         return item;
     } else {
-        throw Error("An item with that name does not exist in the data.")
+        console.log("ERROR OCCURED GETTING ITEM DATA WITH NAME", item_name);
+        throw Error("An item with that name does not exist in the data.");
     }
 
 }

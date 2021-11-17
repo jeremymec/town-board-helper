@@ -2,7 +2,6 @@ import { RecipeModel } from "../../services/recipe_service";
 import RecipeInfo from "../recipe_info/recipe_info";
 
 import IconButton from "@mui/material/IconButton";
-import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import React from "react";
 
@@ -31,7 +30,7 @@ function RecipePanel(props: RecipePanelProps) {
     <div id="recipePanel">
       {props.selectedRecipes.map((recipe, index) => {
         return (
-          <div id="panelItem">
+          <div id="panelItem" key={index}>
             <IconButton
               id="deleteIcon"
               onClick={(e) => {
