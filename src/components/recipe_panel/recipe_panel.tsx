@@ -6,35 +6,28 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import React from "react";
 
 interface RecipePanelProps {
-  selectedRecipes: RecipeModel[];
-  setSelectedRecipes: React.Dispatch<React.SetStateAction<RecipeModel[]>>;
+  selectedRecipes: [RecipeModel, number][];
+  setSelectedRecipes: React.Dispatch<React.SetStateAction<[RecipeModel, number][]>>;
 }
 
 function RecipePanel(props: RecipePanelProps) {
   const deleteButtonCallback = (
     e: React.MouseEvent<HTMLButtonElement>,
-    targetRecipeIndex: number
+    targetRecipeCounter: number
   ) => {
     e.preventDefault();
-    let copyOfSelectedRecipes = [...props.selectedRecipes];
-    copyOfSelectedRecipes.splice(targetRecipeIndex, 1);
-    props.setSelectedRecipes(copyOfSelectedRecipes)
-    // props.setSelectedRecipes([
-    //   ...props.selectedRecipes.filter((recipe, index) => {
-    //     return index != targetRecipeIndex;
-    //   }),
-    // ]);
+    props.setSelectedRecipes(props.selectedRecipes.filter(([recipe, counter]) => counter !== targetRecipeCounter))
   };
 
   return (
     <div id="recipePanel">
-      {props.selectedRecipes.map((recipe, index) => {
+      {props.selectedRecipes.map(([recipe, counter]) => {
         return (
-          <div id="panelItem" key={index}>
+          <div id="panelItem" key={counter}>
             <IconButton
               id="deleteIcon"
               onClick={(e) => {
-                deleteButtonCallback(e, index);
+                deleteButtonCallback(e, counter);
               }}
               data-arg1={recipe}
             >

@@ -8,13 +8,18 @@ interface RecipePickerProps {
   recipes: RecipeModel[];
   value: string | null;
   setValue: React.Dispatch<React.SetStateAction<string | null>>;
-  selectedRecipes: RecipeModel[];
-  setSelectedRecipes: React.Dispatch<React.SetStateAction<RecipeModel[]>>;
+  selectedRecipes: [RecipeModel, number][];
+  setSelectedRecipes: React.Dispatch<React.SetStateAction<[RecipeModel, number][]>>;
 }
 
 function RecipePicker(props: RecipePickerProps) {
   const [recipeNames, setRecipeNames] = useState<string[]>([]);
   const [recipeTextValue, setRecipeTextValue] = useState<string | null>("");
+  const [recipeCounter, setRecipeCounter] = useState(0);
+  
+  const incrementRecipeCounter = () => {
+    setRecipeCounter(recipeCounter + 1);
+  }
 
   useEffect(() => {
     const names = props.recipes.map((recipe) => {
@@ -29,7 +34,8 @@ function RecipePicker(props: RecipePickerProps) {
       return recipe.output.name == recipeTextValue
     })
     if (selectedRecipe){
-      props.setSelectedRecipes([...props.selectedRecipes, selectedRecipe]);
+      props.setSelectedRecipes([...props.selectedRecipes, [selectedRecipe, recipeCounter]]);
+      incrementRecipeCounter();
     }
   };
 
