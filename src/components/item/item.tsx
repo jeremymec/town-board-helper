@@ -15,10 +15,12 @@ import {
   get_recipe_from_output_name,
 } from "../../services/recipe_service";
 import ItemCategory from "./item_category/item_category";
+import { CategoryModel } from "../../services/category_service";
 
 interface ItemProps {
   item: ItemModel;
-  quantity: number;
+  quantity?: number;
+  is_category_item?: boolean;
 }
 
 function Item(props: ItemProps) {
@@ -34,6 +36,10 @@ function Item(props: ItemProps) {
   const handleClick = () => {
     setOpen(!open);
   };
+  
+  const category_item_style = {
+    fontStyle: "italic"
+  }
 
   return (
     <List disablePadding>
@@ -42,34 +48,33 @@ function Item(props: ItemProps) {
           <ListItemAvatar>
             <ItemImage item={props.item}></ItemImage>
           </ListItemAvatar>
-          <ListItemText>{props.item.name}</ListItemText>
-          <ListItemText>&nbsp;&nbsp;x{props.quantity}</ListItemText>
+          <ListItemText primaryTypographyProps={{style: (props.is_category_item ? category_item_style : {})}}>{props.item.name}</ListItemText>
+          {props.quantity && <ListItemText>&nbsp;&nbsp;x{props.quantity}</ListItemText>}
           {recipe && (open ? <ExpandLess /> : <ExpandMore />)}
         </ListItem>
       </ListItemButton>
-      {recipe && (
         <Collaspe in={open}>
           <List disablePadding>
-            {recipe.components.map((component, key) => {
-              return (
-                <ListItem key={key} className={"itemListItem"}>
-                  <Item
-                    item={component.item}
-                    quantity={(component.quantity ?? 1) * props.quantity}
-                  />
-                </ListItem>
-              );
-            })}
-            {recipe.category_components.map((category_component, key) => {
-              return (
-                <ListItem key={key} className={"itemListItem"}>
-                  <ItemCategory category={category_component.category}></ItemCategory>
-                </ListItem>
-              );
-            })}
+            {recipe && (
+              recipe.components.map((component, key) => {
+                return (
+                  <ListItem key={key} className={"itemListItem"}>
+                    <Item
+                      item={component.item}
+                      quantity={(component.quantity ?? 1) * (props.quantity ?? 1)}
+                    />
+                  </ListItem>
+                )
+              }))}
+              {recipe && (
+                recipe.category_components.map((category, key) => {
+                  return (
+                    <ItemCategory category={category.category} quantity={category.quantity} />
+                  )
+                })
+              )}
           </List>
         </Collaspe>
-      )}
     </List>
   );
 }
