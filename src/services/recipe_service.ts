@@ -1,21 +1,22 @@
 import { ItemModel } from './item_service';
+import { CategoryModel } from './category_service';
 import { get_recipe_data } from './data_service';
 
 export interface RecipeModel {
     output: ItemModel,
     components: RecipeItem[],
-    ingredient_types: IngredientType[]
+    category_components: RecipeCategory[]
+}
+
+export interface RecipeCategory {
+    category: CategoryModel,
+    quantity?: number
 }
 
 export interface RecipeItem {
     item: ItemModel,
-    quantity: number
+    quantity?: number
 }
-
-export interface IngredientType {
-    name: string,
-    items: ItemModel[]
-} 
 
 export async function get_recipes(): Promise<RecipeModel[]> {
     const recipes = await get_recipe_data();

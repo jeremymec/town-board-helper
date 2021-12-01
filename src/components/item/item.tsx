@@ -3,7 +3,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import Collaspe from "@mui/material/Collapse";
-import Typography from "@mui/material/Typography";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ListItemText from "@mui/material/ListItemText";
@@ -15,6 +14,7 @@ import {
   RecipeModel,
   get_recipe_from_output_name,
 } from "../../services/recipe_service";
+import ItemCategory from "./item_category/item_category";
 
 interface ItemProps {
   item: ItemModel;
@@ -55,19 +55,17 @@ function Item(props: ItemProps) {
                 <ListItem key={key} className={"itemListItem"}>
                   <Item
                     item={component.item}
-                    quantity={component.quantity * props.quantity}
+                    quantity={(component.quantity ?? 1) * props.quantity}
                   />
                 </ListItem>
               );
             })}
-            {recipe.ingredient_types.map((type) => {
-                return type.items.map((item, key) => {
-                  return (
-                    <ListItem key={key} className={"itemListItem"}>
-                      <Item item={item} quantity={1} />
-                    </ListItem>
-                  );
-                });
+            {recipe.category_components.map((category_component, key) => {
+              return (
+                <ListItem key={key} className={"itemListItem"}>
+                  <ItemCategory category={category_component.category}></ItemCategory>
+                </ListItem>
+              );
             })}
           </List>
         </Collaspe>

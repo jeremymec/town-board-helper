@@ -1,8 +1,10 @@
 import item_data from '../../public/mock_item_data.json';
 import recipe_data from '../../public/mock_recipe_data.json';
+import category_data from '../../public/mock_category_data.json';
 
-import { RecipeModel, IngredientType } from './recipe_service';
+import { RecipeModel } from './recipe_service';
 import { ItemModel, get_item_from_name } from './item_service';
+import { CategoryModel, get_category_from_name } from './category_service';
 
 export async function get_item_data(): Promise<ItemModel[]> {
 
@@ -23,22 +25,21 @@ export async function get_item_data(): Promise<ItemModel[]> {
     return item_data;
 }
 
-export async function get_recipe_data(): Promise<RecipeModel[]> {
-
-    let prebuilt_ingredient_types = new Map<string, IngredientType>();
+export async function get_category_data(): Promise<CategoryModel[]> {
     let item_data = await get_item_data();
 
-    recipe_data.map(data => {
-        data.ingredient_types.forEach(type => {
-            if (prebuilt_ingredient_types.has(type)) return;
-            prebuilt_ingredient_types.set(type, {
-                name: type,
-                items: item_data.filter(item => item.categories.includes(type))
-            })
-        })
+    return category_data.map(category => {
+        return {
+            id: category.id,
+            name: category.name,
+            items: item_data.filter(item => item.categories.includes(category.name))
+        }
     })
 
-    let result = Promise.all(recipe_data.map(async data => ({
+}
+
+export async function get_recipe_data(): Promise<RecipeModel[]> {
+    return Promise.all(recipe_data.map(async data => ({
             output: await get_item_from_name(data.output),
             components: await Promise.all([...Array.from(new Set(data.components))].map(async component => {
                 return {
@@ -46,12 +47,12 @@ export async function get_recipe_data(): Promise<RecipeModel[]> {
                     quantity: data.components.filter(otherComponent => otherComponent === component).length
                 } 
             })),
-            ingredient_types: data.ingredient_types.flatMap(type => {
-                let prebuilt_type = prebuilt_ingredient_types.get(type);
-                return prebuilt_type === undefined ? [] : prebuilt_type;
-            }
-        )
-    })));
-
-    return result;
+            category_components: await Promise.all([...Array.from(new Set(data.category_components))].map(async category_component => {
+                return {
+                    category: await get_category_from_name(category_component),
+                    quantity: data.category_components.filter(otherCategoryComponent => otherCategoryComponent === category_component).length
+                }
+            }))
+        }
+    )));
 }
