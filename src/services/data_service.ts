@@ -1,5 +1,5 @@
-import item_data from '../../public/mock_item_data.json';
-import recipe_data from '../../public/mock_recipe_data.json';
+import item_data from '../../public/items.json';
+import recipe_data from '../../public/recipes.json';
 import category_data from '../../public/mock_category_data.json';
 
 import { RecipeModel } from './recipe_service';
