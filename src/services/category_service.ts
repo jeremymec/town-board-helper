@@ -7,11 +7,12 @@ export interface CategoryModel {
     items: ItemModel[]
 }
 
-export async function get_category_from_name(category_name: string): Promise<CategoryModel> {
-    const categories = await get_category_data();
+export function get_category_from_name(category_name: string): CategoryModel {
 
-    const category = categories.find((category) => {
-        return category.name === category_name;
+    console.log("Hey Listen!")
+    
+    const category = get_category_data().find((category) => {
+        return category.name === category_name || `${category.name} (PRIMARY)` === category_name;
     });
 
     if (category) {

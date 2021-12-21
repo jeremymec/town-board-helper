@@ -18,16 +18,13 @@ export interface RecipeItem {
     quantity?: number
 }
 
-export async function get_recipes(): Promise<RecipeModel[]> {
-    const recipes = await get_recipe_data();
-
-    return recipes;
+export function get_recipes(): RecipeModel[] {
+    return get_recipe_data();
 }
 
 export async function get_recipe_from_output_name(output_name: string): Promise<RecipeModel | null> {
-    const recipes = await get_recipe_data();
 
-    const result = recipes.find(recipe => recipe.output.name === output_name);
+    const result = get_recipe_data().find(recipe => recipe.output.name === output_name);
     
     if (result) { return result; }
     else {

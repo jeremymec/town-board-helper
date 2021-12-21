@@ -27,11 +27,11 @@ function Item(props: ItemProps) {
   const [recipe, setRecipe] = useState<RecipeModel | null>(null);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
+  if (!props.is_category_item) {
     get_recipe_from_output_name(props.item.name).then((recipe) => {
       setRecipe(recipe);
-    });
-  }, [props.item]);
+    })
+  }
 
   const handleClick = () => {
     setOpen(!open);
@@ -44,7 +44,7 @@ function Item(props: ItemProps) {
   return (
     <List disablePadding>
       <ListItemButton onClick={handleClick}>
-        <ListItem>
+        <ListItem key={0}>
           <ListItemAvatar>
             <ItemImage item={props.item}></ItemImage>
           </ListItemAvatar>
@@ -69,7 +69,7 @@ function Item(props: ItemProps) {
               {recipe && (
                 recipe.category_components.map((category, key) => {
                   return (
-                    <ItemCategory category={category.category} quantity={category.quantity} />
+                    <ItemCategory key={key} category={category.category} quantity={category.quantity} item_key={key}/>
                   )
                 })
               )}

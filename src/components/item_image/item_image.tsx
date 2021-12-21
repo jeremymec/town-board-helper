@@ -8,7 +8,7 @@ interface ItemImageProps {
 function ItemImage(props: ItemImageProps) {
 
     return (
-        <img className="itemImage" src={`${props.item.id}.png`}></img>
+        <img className="itemImage" src={`images/${props.item.id}.png`}></img>
     );
 
 }

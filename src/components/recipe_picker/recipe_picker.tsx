@@ -13,7 +13,9 @@ interface RecipePickerProps {
 }
 
 function RecipePicker(props: RecipePickerProps) {
-  const [recipeNames, setRecipeNames] = useState<string[]>([]);
+  const [recipeNames, setRecipeNames] = useState<string[]>(
+    props.recipes.map(recipe => recipe.output.name)
+  );
   const [recipeTextValue, setRecipeTextValue] = useState<string | null>("");
   const [recipeCounter, setRecipeCounter] = useState(0);
   
@@ -21,19 +23,10 @@ function RecipePicker(props: RecipePickerProps) {
     setRecipeCounter(recipeCounter + 1);
   }
 
-  useEffect(() => {
-    const names = props.recipes.map((recipe) => {
-      return recipe.output.name;
-    });
-    setRecipeNames(names);
-  }, [props.recipes]);
-
   const buttonCallback = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    let selectedRecipe = props.recipes.find((recipe) => {
-      return recipe.output.name == recipeTextValue
-    })
-    if (selectedRecipe){
+    const selectedRecipe = props.recipes.find((recipe) => recipe.output.name == recipeTextValue);
+    if (selectedRecipe) {
       props.setSelectedRecipes([...props.selectedRecipes, [selectedRecipe, recipeCounter]]);
       incrementRecipeCounter();
     }

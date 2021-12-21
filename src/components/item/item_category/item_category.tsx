@@ -12,12 +12,12 @@ import ItemImage from "../../item_image/item_image";
 import Item from "../item";
 
 interface ItemCategoryProps {
-  category: CategoryModel
-  quantity?: number
+  category: CategoryModel;
+  quantity?: number;
+  item_key: number;
 }
 
 function ItemCategory(props: ItemCategoryProps) {
-
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -26,33 +26,31 @@ function ItemCategory(props: ItemCategoryProps) {
 
   return (
     <List disablePadding>
-    <ListItemButton onClick={handleClick}>
-    <ListItem>
+      <ListItemButton onClick={handleClick}>
+        <ListItem key={props.item_key}>
           <ListItemAvatar>
             <ItemImage item={props.category}></ItemImage>
           </ListItemAvatar>
           <ListItemText>{props.category.name}</ListItemText>
-          {props.quantity && <ListItemText>&nbsp;&nbsp;x{props.quantity}</ListItemText>}
-        {(open ? <ExpandLess /> : <ExpandMore />)}
-      </ListItem>
-    </ListItemButton>
-    <Collaspe in={open}>
-      <List disablePadding>
-        {props.category.items.map((item, key) => {
-          return (
-            <ListItem key={key} className={"itemListItem category"}>
-              <Item
-                item={item}
-                is_category_item={true}
-              />
-            </ListItem>
-          )
-        })}
-      </List>
-    </Collaspe>
+          {props.quantity && (
+            <ListItemText>&nbsp;&nbsp;x{props.quantity}</ListItemText>
+          )}
+          {open ? <ExpandLess /> : <ExpandMore />}
+        </ListItem>
+      </ListItemButton>
+      <Collaspe in={open}>
+        <List disablePadding>
+          {props.category.items.map((item, key) => {
+            return (
+              <ListItem key={key} className={"itemListItem category"}>
+                <Item item={item} is_category_item={true} />
+              </ListItem>
+            );
+          })}
+        </List>
+      </Collaspe>
     </List>
   );
-
 }
 
 export default ItemCategory;

@@ -9,9 +9,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import RecipePanel from "../recipe_panel/recipe_panel";
 
 function App() {
-  const [recipes, setRecipes] = useState<RecipeModel[]>([]);
   const [recipeValue, setRecipeValue] = useState<string | null>(null);
-  const [selectedRecipes, setSelectedRecipes] = useState<RecipeModel[]>([]);
+  const [selectedRecipes, setSelectedRecipes] = useState<[RecipeModel, number][]>([]);
 
   const muiTheme = createTheme({
     palette: {
@@ -22,14 +21,7 @@ function App() {
     },
   });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const recipes = await get_recipes();
-      setRecipes(recipes);
-    };
-
-    fetchData();
-  }, []);
+  const recipes = get_recipes()
 
   return (
     <ThemeProvider theme={muiTheme}>

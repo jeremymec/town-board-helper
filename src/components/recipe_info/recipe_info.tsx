@@ -14,19 +14,17 @@ interface RecipeInfoProps {
 }
 
 function RecipeInfo(props: RecipeInfoProps) {
-  
-  const [outputItem, setOutputItem] = useState<ItemModel>();
+  const { recipe } = props;
+
   const [quantity, setQuantity] = useState<number>(1);
 
-  useEffect(() => {
-      setOutputItem(props.recipe.output)
-  }, [props.recipe]);
+  useEffect( () => { console.log("hey") })
 
   return (
-    outputItem ?
+    recipe.output ?
       <div className="itemInfo">
-        <ItemHeader item={outputItem} quantity={quantity} setQuantity={setQuantity} />
-        <Item item={outputItem} quantity={quantity} />
+        <ItemHeader item={recipe.output} quantity={quantity} setQuantity={setQuantity} />
+        <Item item={recipe.output} quantity={quantity} />
       </div>
       :
       <div className="itemInfo" />
