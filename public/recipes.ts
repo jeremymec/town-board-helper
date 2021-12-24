@@ -1,5 +1,7 @@
 var recipes = [
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Dried Meat Samples",
         "components": [
             "Pork",
@@ -12,6 +14,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Meat Jerky Rations",
         "components": [
             "Pork",
@@ -33,6 +37,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Flavored Pork Provisions",
         "components": [
             "Pork",
@@ -63,6 +69,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Sausage",
         "components": [],
         "category_components": [
@@ -72,6 +80,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Quality Meat Supplies",
         "components": [
             "Red Meat",
@@ -114,6 +124,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Perennial Herb Stockpile",
         "components": [
             "Thyme",
@@ -180,6 +192,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Canned Fish Samples",
         "components": [
             "Fish Filet",
@@ -192,6 +206,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Canned Fish Rations",
         "components": [
             "Fish Filet",
@@ -213,6 +229,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Salted Fish Provisions",
         "components": [
             "Firm Fish Filet",
@@ -243,6 +261,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Vegetable Supplies",
         "components": [
             "Onion",
@@ -285,6 +305,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Spice Stockpile",
         "components": [
             "Nutmeg",
@@ -351,6 +373,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Juice Samples",
         "components": [
             "Cranberry",
@@ -363,6 +387,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Sweet Juice Rations",
         "components": [
             "Cranberry",
@@ -384,6 +410,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Yoghurt Provisions",
         "components": [
             "Strawberry",
@@ -414,6 +442,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Cereal Supplies",
         "components": [
             "Barley",
@@ -456,6 +486,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Meat Stockpile",
         "components": [
             "Pork",
@@ -522,6 +554,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Cooking Oil",
         "components": [
             "Fish Oil",
@@ -531,6 +565,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Glazed Chicken Rations",
         "components": [
             "Poultry",
@@ -552,6 +588,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Perennial Herb Provisions",
         "components": [
             "Thyme",
@@ -582,6 +620,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Cheese",
         "components": [
             "Milk",
@@ -591,6 +631,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Butter",
         "components": [
             "Milk",
@@ -599,6 +641,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Dairy Supplies",
         "components": [
             "Cheese",
@@ -641,6 +685,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Vegetable Stockpile",
         "components": [
             "Onion",
@@ -707,6 +753,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Herbal Game Rations",
         "components": [
             "Game Meat",
@@ -728,6 +776,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Exotic Herb Provisions",
         "components": [
             "Basil",
@@ -758,6 +808,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Flour",
         "components": [],
         "category_components": [
@@ -766,6 +818,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Pasta",
         "components": [
             "Flour",
@@ -774,6 +828,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Bread",
         "components": [
             "Flour",
@@ -782,6 +838,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Carb Supplies",
         "components": [
             "Potato",
@@ -824,6 +882,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Cereal Stockpile",
         "components": [
             "Barley",
@@ -890,6 +950,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Garlic Meat Rations",
         "components": [
             "Red Meat",
@@ -911,6 +973,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Spice Provisions",
         "components": [
             "Nutmeg",
@@ -941,6 +1005,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Fruit Supplies",
         "components": [
             "Strawberry",
@@ -983,6 +1049,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Fruit Stockpile",
         "components": [
             "Strawberry",
@@ -1049,6 +1117,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Breakfast Rations",
         "components": [
             "Egg",
@@ -1070,6 +1140,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Condiment Provisions",
         "components": [
             "Salt",
@@ -1100,6 +1172,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Luxury Supplies",
         "components": [
             "Venison",
@@ -1142,6 +1216,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Baking Stockpile",
         "components": [
             "Sugar",
@@ -1208,6 +1284,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Herb Rations",
         "components": [
             "Tarragon",
@@ -1229,6 +1307,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Meat Provisions",
         "components": [
             "Pork",
@@ -1259,6 +1339,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Exotic Herb Supplies",
         "components": [
             "Basil",
@@ -1301,6 +1383,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Seasoning Blend",
         "components": [],
         "category_components": [
@@ -1310,6 +1394,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Condiment Stockpile",
         "components": [
             "Salt",
@@ -1376,6 +1462,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Carb Rations",
         "components": [
             "Pasta",
@@ -1392,6 +1480,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Canned Fish Provisions",
         "components": [
             "Fish Filet",
@@ -1422,6 +1512,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Canned Fish Supplies",
         "components": [
             "Fish Filet",
@@ -1464,6 +1556,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Pastry Crust",
         "components": [
             "Flour",
@@ -1473,6 +1567,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Carb Stockpile",
         "components": [
             "Potato",
@@ -1539,6 +1635,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Flavored Fish Rations",
         "components": [
             "Fish Filet",
@@ -1560,6 +1658,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Baking Provisions",
         "components": [
             "Sugar",
@@ -1590,6 +1690,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Condiment Supplies",
         "components": [
             "Salt",
@@ -1632,6 +1734,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Canned Fish Stockpile",
         "components": [
             "Fish Filet",
@@ -1698,6 +1802,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Light Ration",
         "components": [],
         "category_components": [
@@ -1705,6 +1811,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Light Meal",
         "components": [],
         "category_components": [
@@ -1714,6 +1822,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Satisfying Meal",
         "components": [],
         "category_components": [
@@ -1724,6 +1834,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Hearty Meal",
         "components": [],
         "category_components": [
@@ -1735,6 +1847,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Energizing Light Ration",
         "components": [],
         "category_components": [
@@ -1742,6 +1856,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Energizing Travel Ration",
         "components": [],
         "category_components": [
@@ -1750,6 +1866,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Energizing Light Meal",
         "components": [],
         "category_components": [
@@ -1759,6 +1877,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Energizing Satisfying Meal",
         "components": [],
         "category_components": [
@@ -1769,6 +1889,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Cooking",
         "output": "Energizing Hearty Meal",
         "components": [],
         "category_components": [
@@ -1780,6 +1902,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Plundering Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -1816,6 +1940,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Iron Ingot",
         "components": [
             "Iron Ore",
@@ -1826,6 +1952,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Timber",
         "components": [
             "Green Wood",
@@ -1836,6 +1964,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Coarse Leather",
         "components": [
             "Rawhide Scraps",
@@ -1845,6 +1975,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Plundering Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -1871,6 +2003,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Charcoal",
         "components": [],
         "category_components": [
@@ -1879,6 +2013,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Steel Ingot",
         "components": [
             "Iron Ingot",
@@ -1892,6 +2028,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Lumber",
         "components": [
             "Aged Wood",
@@ -1906,6 +2044,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Rugged Leather",
         "components": [
             "Coarse Leather",
@@ -1918,6 +2058,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Plundering Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -1939,6 +2081,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Starmetal Ingot",
         "components": [
             "Starmetal Ore",
@@ -1957,6 +2101,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Wyrdwood Planks",
         "components": [
             "Wyrdwood",
@@ -1973,6 +2119,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Layered Leather",
         "components": [
             "Thick Hide",
@@ -1989,6 +2137,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Plundering Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -2005,6 +2155,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bulwark Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -2041,6 +2193,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bulwark Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -2067,6 +2221,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bulwark Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -2088,6 +2244,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bulwark Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -2104,6 +2262,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Impaling Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -2140,6 +2300,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Impaling Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -2166,6 +2328,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Impaling Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -2187,6 +2351,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Impaling Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -2201,6 +2367,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bruising Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -2257,6 +2425,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bruising Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -2288,6 +2458,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bruising Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -2319,6 +2491,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Bruising Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -2340,6 +2514,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Cleaving Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -2396,6 +2572,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Cleaving Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -2427,6 +2605,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Cleaving Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -2458,6 +2638,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Cleaving Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -2479,6 +2661,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Crushing Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -2535,6 +2719,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Crushing Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -2566,6 +2752,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Crushing Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -2597,6 +2785,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Crushing Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -2618,6 +2808,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Ransacking Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -2674,6 +2866,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Ransacking Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -2720,6 +2914,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Ransacking Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -2766,6 +2962,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Ransacking Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -2797,6 +2995,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Gashing Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -2893,6 +3093,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Gashing Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -2939,6 +3141,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Gashing Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -2985,6 +3189,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Gashing Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -3016,6 +3222,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Reaving Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -3112,6 +3320,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Reaving Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -3158,6 +3368,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Reaving Steel Armaments",
         "components": [
             "Steel Ingot",
@@ -3204,6 +3416,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Reaving Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -3235,6 +3449,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Pillaging Crude Iron Armaments",
         "components": [
             "Iron Ore",
@@ -3331,6 +3547,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Pillaging Iron Armaments",
         "components": [
             "Iron Ingot",
@@ -3377,6 +3595,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Weaponsmithing",
         "output": "Pillaging Starmetal Armaments",
         "components": [
             "Starmetal Ingot",
@@ -3423,6 +3643,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Rugged Crude Iron Armor",
         "components": [
             "Iron Ore",
@@ -3459,6 +3681,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Linen",
         "components": [
             "Fibers",
@@ -3469,6 +3693,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Rugged Iron Armor",
         "components": [
             "Iron Ingot",
@@ -3495,6 +3721,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Sateen",
         "components": [
             "Linen",
@@ -3507,6 +3735,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Rugged Steel Armor",
         "components": [
             "Steel Ingot",
@@ -3528,6 +3758,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Silk",
         "components": [
             "Silk Threads",
@@ -3544,6 +3776,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Rugged Starmetal Armor",
         "components": [
             "Starmetal Ingot",
@@ -3560,6 +3794,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Toughened Crude Iron Armor",
         "components": [
             "Iron Ore",
@@ -3596,6 +3832,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Toughened Iron Armor",
         "components": [
             "Iron Ingot",
@@ -3622,6 +3860,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Toughened Steel Armor",
         "components": [
             "Steel Ingot",
@@ -3643,6 +3883,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Toughened Starmetal Armor",
         "components": [
             "Starmetal Ingot",
@@ -3664,6 +3906,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stout Crude Iron Armor",
         "components": [
             "Iron Ore",
@@ -3700,6 +3944,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stout Iron Armor",
         "components": [
             "Iron Ingot",
@@ -3726,6 +3972,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stout Steel Armor",
         "components": [
             "Steel Ingot",
@@ -3747,6 +3995,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stout Starmetal Armor",
         "components": [
             "Starmetal Ingot",
@@ -3768,6 +4018,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Hardened Crude Iron Armor",
         "components": [
             "Iron Ore",
@@ -3824,6 +4076,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Hardened Iron Armor",
         "components": [
             "Iron Ingot",
@@ -3855,6 +4109,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Hardened Steel Armor",
         "components": [
             "Steel Ingot",
@@ -3886,6 +4142,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Hardened Starmetal Armor",
         "components": [
             "Starmetal Ingot",
@@ -3907,6 +4165,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stalwart Crude Iron Armor",
         "components": [
             "Iron Ore",
@@ -3963,6 +4223,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stalwart Iron Armor",
         "components": [
             "Iron Ingot",
@@ -3994,6 +4256,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stalwart Steel Armor",
         "components": [
             "Steel Ingot",
@@ -4025,6 +4289,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Stalwart Starmetal Armor",
         "components": [
             "Starmetal Ingot",
@@ -4056,6 +4322,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Unyielding Crude Iron Armor",
         "components": [
             "Iron Ore",
@@ -4112,6 +4380,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Unyielding Iron Armor",
         "components": [
             "Iron Ingot",
@@ -4143,6 +4413,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Unyielding Steel Armor",
         "components": [
             "Steel Ingot",
@@ -4174,6 +4446,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Unyielding Starmetal Armor",
         "components": [
             "Starmetal Ingot",
@@ -4205,6 +4479,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Impenetrable Crude Iron Armor",
         "components": [
             "Iron Ore",
@@ -4261,6 +4537,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Impenetrable Iron Armor",
         "components": [
             "Iron Ingot",
@@ -4307,6 +4585,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Impenetrable Steel Armor",
         "components": [
             "Steel Ingot",
@@ -4353,6 +4633,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Armoring",
         "output": "Set of Impenetrable Starmetal Armor",
         "components": [
             "Starmetal Ingot",
@@ -4384,6 +4666,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Weak Alkahest",
         "components": [
             "Hyssop",
@@ -4393,6 +4677,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Weak Mana Potion",
         "components": [
             "Weak Alkahest"
@@ -4402,6 +4688,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Common Alkahest",
         "components": [
             "Hyssop",
@@ -4413,6 +4701,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Common Mana Potion",
         "components": [
             "Common Alkahest"
@@ -4422,6 +4712,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Strong Alkahest",
         "components": [
             "Hyssop",
@@ -4435,6 +4727,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Strong Mana Potion",
         "components": [
             "Strong Alkahest"
@@ -4445,6 +4739,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Powerful Alkahest",
         "components": [
             "Hyssop",
@@ -4460,6 +4756,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Powerful Mana Potion",
         "components": [
             "Powerful Alkahest"
@@ -4471,6 +4769,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Infused Alkahest",
         "components": [
             "Hyssop",
@@ -4489,6 +4789,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Infused Mana Potion",
         "components": [
             "Infused Alkahest"
@@ -4500,6 +4802,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Weak Health Potion",
         "components": [
             "Weak Alkahest"
@@ -4509,6 +4813,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Common Health Potion",
         "components": [
             "Common Alkahest"
@@ -4518,6 +4824,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Strong Health Potion",
         "components": [
             "Strong Alkahest"
@@ -4528,6 +4836,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Powerful Health Potion",
         "components": [
             "Powerful Alkahest"
@@ -4539,6 +4849,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Infused Health Potion",
         "components": [
             "Infused Alkahest"
@@ -4550,6 +4862,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Common Regeneration Potion",
         "components": [
             "Common Alkahest"
@@ -4560,6 +4874,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Strong Regeneration Potion",
         "components": [
             "Strong Alkahest"
@@ -4570,6 +4886,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Powerful Regeneration Potion",
         "components": [
             "Powerful Alkahest"
@@ -4581,6 +4899,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": true,
+        "crafting_category": "Alchemy",
         "output": "Infused Regeneration Potion",
         "components": [
             "Infused Alkahest"
@@ -4592,6 +4912,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Sand Flux",
         "components": [
             "Common Material Converter"
@@ -4620,6 +4942,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Shelldust Flux",
         "components": [
             "Advanced Material Converter"
@@ -4648,6 +4972,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Obsidian Flux",
         "components": [
             "Masterwork Material Converter"
@@ -4676,6 +5002,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Tannin",
         "components": [
             "Common Material Converter"
@@ -4704,6 +5032,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Rested Tannin",
         "components": [
             "Advanced Material Converter"
@@ -4732,6 +5062,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Aged Tannin",
         "components": [
             "Masterwork Material Converter"
@@ -4760,6 +5092,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Coarse Sandpaper",
         "components": [
             "Common Material Converter"
@@ -4788,6 +5122,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Fine Sandpaper",
         "components": [
             "Advanced Material Converter"
@@ -4816,6 +5152,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Obsidian Sandpaper",
         "components": [
             "Masterwork Material Converter"
@@ -4844,6 +5182,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Crossweave",
         "components": [
             "Common Material Converter"
@@ -4872,6 +5212,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Silkweave",
         "components": [
             "Advanced Material Converter"
@@ -4900,6 +5242,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Wireweave",
         "components": [
             "Masterwork Material Converter"
@@ -4928,6 +5272,8 @@ var recipes = [
         ]
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Air Wisp",
         "components": [
             "Air Mote",
@@ -4939,6 +5285,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Air Essence",
         "components": [
             "Air Wisp",
@@ -4949,6 +5297,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Air Quintessence",
         "components": [
             "Air Essence",
@@ -4958,6 +5308,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Soul Wisp",
         "components": [
             "Soul Mote",
@@ -4969,6 +5321,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Soul Essence",
         "components": [
             "Soul Wisp",
@@ -4979,6 +5333,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Soul Quintessence",
         "components": [
             "Soul Essence",
@@ -4988,6 +5344,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Earth Wisp",
         "components": [
             "Earth Mote",
@@ -4999,6 +5357,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Earth Essence",
         "components": [
             "Earth Wisp",
@@ -5009,6 +5369,8 @@ var recipes = [
         "category_components": []
     },
     {
+        "base_recipe": false,
+        "crafting_category": "None",
         "output": "Earth Quintessence",
         "components": [
             "Earth Essence",
