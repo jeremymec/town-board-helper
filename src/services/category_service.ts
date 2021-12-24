@@ -8,8 +8,6 @@ export interface CategoryModel {
 }
 
 export function get_category_from_name(category_name: string): CategoryModel {
-
-    console.log("Hey Listen!")
     
     const category = get_category_data().find((category) => {
         return category.name === category_name || `${category.name} (PRIMARY)` === category_name;

@@ -18,8 +18,6 @@ function RecipeInfo(props: RecipeInfoProps) {
 
   const [quantity, setQuantity] = useState<number>(1);
 
-  useEffect( () => { console.log("hey") })
-
   return (
     recipe.output ?
       <div className="itemInfo">
