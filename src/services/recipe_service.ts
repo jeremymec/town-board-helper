@@ -6,6 +6,8 @@ export interface RecipeModel {
     output: ItemModel,
     components: RecipeItem[],
     category_components: RecipeCategory[]
+    base_recipe: boolean,
+    crafting_category: string
 }
 
 export interface RecipeCategory {
@@ -20,6 +22,14 @@ export interface RecipeItem {
 
 export function get_recipes(): RecipeModel[] {
     return get_recipe_data();
+}
+
+export function get_base_recipes(): RecipeModel[] {
+    const recipes = get_recipe_data();
+
+    return recipes.filter(recipe => {
+        return recipe.base_recipe
+    })
 }
 
 export async function get_recipe_from_output_name(output_name: string): Promise<RecipeModel | null> {

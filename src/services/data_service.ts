@@ -45,7 +45,9 @@ function compute_recipe_data(): RecipeModel[] {
                     category: get_category_from_name(category_component),
                     quantity: data.category_components.filter(otherCategoryComponent => otherCategoryComponent === category_component).length
                 }
-            })
+            }),
+            base_recipe: data.base_recipe,
+            crafting_category: data.crafting_category
         }
     ));
 }

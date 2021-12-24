@@ -21,11 +21,12 @@ interface ItemProps {
   item: ItemModel;
   quantity?: number;
   is_category_item?: boolean;
+  start_open?: boolean
 }
 
 function Item(props: ItemProps) {
   const [recipe, setRecipe] = useState<RecipeModel | null>(null);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(props.start_open ?? false);
 
   if (!props.is_category_item) {
     get_recipe_from_output_name(props.item.name).then((recipe) => {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import { get_recipes, RecipeModel } from "../../services/recipe_service";
+import { get_base_recipes, RecipeModel } from "../../services/recipe_service";
 
 import RecipePicker from "../recipe_picker/recipe_picker";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -21,7 +21,7 @@ function App() {
     },
   });
 
-  const recipes = get_recipes()
+  const recipes = get_base_recipes()
 
   return (
     <ThemeProvider theme={muiTheme}>
