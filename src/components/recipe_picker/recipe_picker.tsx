@@ -13,9 +13,9 @@ interface RecipePickerProps {
 }
 
 function RecipePicker(props: RecipePickerProps) {
-  const [recipeNames, setRecipeNames] = useState<string[]>(
-    props.recipes.map(recipe => recipe.output.name)
-  );
+
+  const recipeNames = props.recipes.map(recipe => recipe.output.name);
+
   const [recipeTextValue, setRecipeTextValue] = useState<string | null>("");
   const [recipeCounter, setRecipeCounter] = useState(0);
   
