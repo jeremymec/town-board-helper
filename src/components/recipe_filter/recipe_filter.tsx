@@ -15,11 +15,12 @@ function RecipeFilter(props: RecipeFilterProps) {
   };
 
   return (
-    <div>
+    <div className="recipeFilter">
       <ToggleButtonGroup onChange={handleChange} value={props.filter} exclusive>
         <ToggleButton value="Cooking">Cooking</ToggleButton>
         <ToggleButton value="Weaponsmithing">Weaponsmithing</ToggleButton>
         <ToggleButton value="Armoring">Armoring</ToggleButton>
+        <ToggleButton value="Alchemy">Alchemy</ToggleButton>
       </ToggleButtonGroup>
     </div>
   );

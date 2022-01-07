@@ -36,14 +36,16 @@ function App() {
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
       <div className="appContainer">
-        <RecipePicker
-          recipes={recipes}
-          selectedRecipes={selectedRecipes}
-          setSelectedRecipes={setSelectedRecipes}
-          value={recipeValue}
-          setValue={setRecipeValue}
-        ></RecipePicker>
-        <RecipeFilter filter={filter} setFilter={onFilterChange}/>
+        <div className="searchContainer">
+          <RecipePicker
+            recipes={recipes}
+            selectedRecipes={selectedRecipes}
+            setSelectedRecipes={setSelectedRecipes}
+            value={recipeValue}
+            setValue={setRecipeValue}
+          ></RecipePicker>
+          <RecipeFilter filter={filter} setFilter={onFilterChange}/>
+        </div>
         <RecipePanel
           selectedRecipes={selectedRecipes}
           setSelectedRecipes={setSelectedRecipes}
