@@ -15,13 +15,13 @@ import {
   get_recipe_from_output_name,
 } from "../../services/recipe_service";
 import ItemCategory from "./item_category/item_category";
-import { CategoryModel } from "../../services/category_service";
 
 interface ItemProps {
   item: ItemModel;
   quantity?: number;
   is_category_item?: boolean;
   start_open?: boolean
+  key: number;
 }
 
 function Item(props: ItemProps) {
@@ -42,57 +42,48 @@ function Item(props: ItemProps) {
     fontStyle: "italic"
   }
 
+  const regular_item_style = {
+    fontSize: "18px"
+  }
+
+  const itemText = `\u00A0${props.item.name}` + (!props.is_category_item ? `\u00A0\u00A0x${props.quantity}` : '');
+
   return (
-    <List disablePadding>
+    <List disablePadding dense className="item">
       <ListItemButton onClick={handleClick}>
-        <ListItem key={0}>
+        <ListItem>
           <ListItemAvatar>
             <ItemImage item={props.item}></ItemImage>
           </ListItemAvatar>
-          <ListItemText primaryTypographyProps={{style: (props.is_category_item ? category_item_style : {})}}>{props.item.name}</ListItemText>
-          {props.quantity && <ListItemText>&nbsp;&nbsp;x{props.quantity}</ListItemText>}
+          <ListItemText className="itemNameText" primaryTypographyProps={{style: (props.is_category_item ? category_item_style : regular_item_style)}}>{itemText}</ListItemText>
           {recipe && (open ? <ExpandLess /> : <ExpandMore />)}
         </ListItem>
       </ListItemButton>
-        <Collaspe in={open}>
-          <List disablePadding>
+      <Collaspe in={open}>
+        <List disablePadding>
+          {recipe && (
+            recipe.components.map((component, key) => {
+              return (
+                // <ListItem key={key} className={"itemListItem"}>
+                  <Item
+                    item={component.item}
+                    quantity={(component.quantity ?? 1) * (props.quantity ?? 1)}
+                    key={key}
+                  />
+                // </ListItem>
+              )
+            }))}
             {recipe && (
-              recipe.components.map((component, key) => {
+              recipe.category_components.map((category, key) => {
                 return (
-                  <ListItem key={key} className={"itemListItem"}>
-                    <Item
-                      item={component.item}
-                      quantity={(component.quantity ?? 1) * (props.quantity ?? 1)}
-                    />
-                  </ListItem>
+                  <ItemCategory key={key} category={category.category} quantity={category.quantity} item_key={key}/>
                 )
-              }))}
-              {recipe && (
-                recipe.category_components.map((category, key) => {
-                  return (
-                    <ItemCategory key={key} category={category.category} quantity={category.quantity} item_key={key}/>
-                  )
-                })
-              )}
-          </List>
-        </Collaspe>
+              })
+            )}
+        </List>
+      </Collaspe>
     </List>
   );
 }
 
 export default Item;
-
-{
-  /* 
-{Array.from(baseItems).map(([item, amount]) => ({item, amount})).map((pair, key) => {
-            return (
-                <div key={key}>
-                    <ListItem>
-                        <ItemImage item={props.item} />
-                        <ListItemText className="componentName">{pair.item.name} x{pair.amount}</ListItemText>
-                    </ListItem>
-                    <Divider />
-                </div>
-            )
-            })} */
-}

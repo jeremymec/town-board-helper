@@ -24,17 +24,20 @@ function ItemCategory(props: ItemCategoryProps) {
     setOpen(!open);
   };
 
+  const regular_item_style = {
+    fontSize: "18px"
+  }
+
+  const itemText = `\u00A0${props.category.name}` + (props.category ? `\u00A0\u00A0x${props.quantity}` : '');
+
   return (
     <List disablePadding>
       <ListItemButton onClick={handleClick}>
-        <ListItem key={props.item_key}>
+        <ListItem className="item" key={props.item_key}>
           <ListItemAvatar>
             <ItemImage item={props.category}></ItemImage>
           </ListItemAvatar>
-          <ListItemText>{props.category.name}</ListItemText>
-          {props.quantity && (
-            <ListItemText>&nbsp;&nbsp;x{props.quantity}</ListItemText>
-          )}
+          <ListItemText className="itemNameText" primaryTypographyProps={{style:regular_item_style}}>{itemText}</ListItemText>
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
       </ListItemButton>
@@ -43,7 +46,7 @@ function ItemCategory(props: ItemCategoryProps) {
           {props.category.items.map((item, key) => {
             return (
               <ListItem key={key} className={"itemListItem category"}>
-                <Item item={item} is_category_item={true} />
+                <Item item={item} is_category_item={true} key={key}/>
               </ListItem>
             );
           })}

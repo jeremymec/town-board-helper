@@ -14,7 +14,7 @@ interface ItemHeaderProps {
 function ItemHeader(props: ItemHeaderProps) {
 
     const inputProps: InputBaseComponentProps = {
-        style: {fontSize: 40},
+        style: {fontSize: 28},
         inputMode: "numeric",
         pattern: "[0-9]*" 
     }
@@ -33,7 +33,7 @@ function ItemHeader(props: ItemHeaderProps) {
     return (
         <div className="itemHeaderContainer">
             {/* {<img className="itemImage" src={`${props.item?.id}.png`}></img>} */}
-            <Typography className="itemHeaderName">{props.item?.name} &nbsp;&nbsp;x</Typography>
+            <Typography className="itemHeaderName">{props.item?.name} &nbsp;x</Typography>
             <div className="itemHeaderQuantityContainer">
                 <TextField inputProps={inputProps} fullWidth={true} size={'small'} value={props.quantity} onChange={handleQuantityChange}></TextField>
             </div>

@@ -22,7 +22,7 @@ function RecipeInfo(props: RecipeInfoProps) {
     recipe.output ?
       <div className="itemInfo">
         <ItemHeader item={recipe.output} quantity={quantity} setQuantity={setQuantity} />
-        <Item item={recipe.output} quantity={quantity} start_open={true}/>
+        <Item item={recipe.output} quantity={quantity} start_open={true} key={0}/>
       </div>
       :
       <div className="itemInfo" />
