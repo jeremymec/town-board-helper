@@ -24,15 +24,18 @@ function RecipePanel(props: RecipePanelProps) {
       {props.selectedRecipes.map(([recipe, counter]) => {
         return (
           <div id="panelItem" key={counter}>
-            <IconButton
-              id="deleteIcon"
-              onClick={(e) => {
-                deleteButtonCallback(e, counter);
-              }}
-              data-arg1={recipe}
-            >
-              <DeleteIcon />
-            </IconButton>
+            <div id="deleteIconContainer">
+              <IconButton
+                id="deleteIcon"
+                color='error'
+                onClick={(e) => {
+                  deleteButtonCallback(e, counter);
+                }}
+                data-arg1={recipe}
+              >
+                <DeleteIcon />
+              </IconButton>
+            </div>
             <RecipeInfo recipe={recipe}></RecipeInfo>
           </div>
         );

@@ -4,12 +4,12 @@
     flex-direction: row;
     flex-basis: auto;
     justify-content: center;
+    align-items: center;
+    width: 85%;
 }
 
 .itemHeaderName {
-
-    padding-left: 1vh;
-    font-size: 3vh;
+    font-size: 2.75vh;
     color: lightgrey;
     font-family: 'IM Fell DW Pica';
 }

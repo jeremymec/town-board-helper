@@ -14,7 +14,10 @@ interface ItemHeaderProps {
 function ItemHeader(props: ItemHeaderProps) {
 
     const inputProps: InputBaseComponentProps = {
-        style: {fontSize: 28},
+        style: {
+            fontSize: '2.5vh',
+            //fontFamily: 'IM Fell DW Pica'
+        },
         inputMode: "numeric",
         pattern: "[0-9]*" 
     }
@@ -24,7 +27,7 @@ function ItemHeader(props: ItemHeaderProps) {
 
         const updatedQuantity = Number(event.target.value)
         
-        if (!isNaN(updatedQuantity) && updatedQuantity > 0) {
+        if (!isNaN(updatedQuantity) && updatedQuantity > 0 && updatedQuantity < 100) {
             props.setQuantity(updatedQuantity);
         }
 

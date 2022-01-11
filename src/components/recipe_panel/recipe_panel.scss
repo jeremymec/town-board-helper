@@ -1,6 +1,8 @@
 #recipePanel {
     display: inline-flex;
     flex-direction: row;
+    overflow: visible;
+    max-width: 80%;
 }
 
 #panelItem {
@@ -10,10 +12,19 @@
     border-width: 1px;
     border-radius: 5px;
     border-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+}
+
+#deleteIconContainer {
+    width: 100%;
+    text-align: right;
 }
 
 #deleteIcon {
-    background-color: red;
-    margin: -1.5vh;
-    margin-top: -3.5vh;
+    margin: -2.5vh;
+    margin-top: -2vh;
+    position: absolute;
+    border-radius: 10px;
 }

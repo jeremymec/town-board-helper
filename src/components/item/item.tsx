@@ -46,7 +46,9 @@ function Item(props: ItemProps) {
     fontSize: "18px"
   }
 
-  const itemText = `\u00A0${props.item.name}` + (!props.is_category_item ? `\u00A0\u00A0x${props.quantity}` : '');
+  const trailing_spaces_count = 4 - String(props.quantity ?? 0).length;
+  const trailing_spaces_text = "\u00A0\u00A0".repeat(trailing_spaces_count >= 0 ? trailing_spaces_count : 0);
+  const itemText = `\u00A0${props.item.name}` + (!props.is_category_item ? `\u00A0\u00A0x${props.quantity}` : '') + trailing_spaces_text;
 
   return (
     <List disablePadding dense className="item">
@@ -76,7 +78,7 @@ function Item(props: ItemProps) {
             {recipe && (
               recipe.category_components.map((category, key) => {
                 return (
-                  <ItemCategory key={key} category={category.category} quantity={category.quantity} item_key={key}/>
+                  <ItemCategory key={key} category={category.category} quantity={(category.quantity ?? 1) * (props.quantity ?? 1)} item_key={key}/>
                 )
               })
             )}

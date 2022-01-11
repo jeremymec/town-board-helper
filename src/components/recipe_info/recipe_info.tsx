@@ -1,3 +1,5 @@
+import Divider from "@mui/material/Divider";
+
 import { useEffect, useState } from "react";
 
 import {
@@ -22,6 +24,7 @@ function RecipeInfo(props: RecipeInfoProps) {
     recipe.output ?
       <div className="itemInfo">
         <ItemHeader item={recipe.output} quantity={quantity} setQuantity={setQuantity} />
+        <Divider className="itemInfoDivider" variant="middle" />
         <Item item={recipe.output} quantity={quantity} start_open={true} key={0}/>
       </div>
       :
