@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import AutoComplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { RecipeModel } from "../../services/recipe_service";
 
 interface RecipePickerProps {
@@ -43,7 +46,7 @@ function RecipePicker(props: RecipePickerProps) {
           setRecipeTextValue(newValue);
         }}
       />
-      <Button onClick={buttonCallback}>Go</Button>
+      <IconButton className="goButton" onClick={buttonCallback} color="success"><AddBoxIcon fontSize="large"/></IconButton>
     </div>
   );
 }

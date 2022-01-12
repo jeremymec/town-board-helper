@@ -2,10 +2,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 95vh;
+    height: 100vh;
 }
 
 .searchContainer {
     text-align: center;
     min-width: 80vh;
+}
+
+.mainContent {
+    height: 100vh;
+    text-align: center;
+}
+
+.bottomBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

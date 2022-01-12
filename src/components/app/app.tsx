@@ -9,6 +9,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 import RecipePanel from "../recipe_panel/recipe_panel";
 import RecipeFilter from "../recipe_filter/recipe_filter";
 
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InfoIcon from '@mui/icons-material/Info';
+import Button from '@mui/material/Button'
+
+import AboutDialog from "../about_dialog/about_dialog";
+
 export type Filter = "" | "Cooking";
 
 function App() {
@@ -17,6 +23,7 @@ function App() {
   const [selectedRecipes, setSelectedRecipes] = useState<[RecipeModel, number][]>([]);
   const [filter, setFilter] = useState<Filter>("");
   const [recipes, setRecipes] = useState<RecipeModel[]>(get_base_recipes(filter))
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   const muiTheme = createTheme({
     palette: {
@@ -32,10 +39,16 @@ function App() {
     setRecipes(get_base_recipes(filter));
   }
 
+  const onAboutDialogClose = () => {
+    setAboutOpen(false);
+  }
+
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
       <div className="appContainer">
+        <AboutDialog open={aboutOpen} closeCallback={onAboutDialogClose}></AboutDialog>
+        <div className="mainContent">
         <div className="searchContainer">
           <RecipePicker
             recipes={recipes}
@@ -50,6 +63,11 @@ function App() {
           selectedRecipes={selectedRecipes}
           setSelectedRecipes={setSelectedRecipes}
         ></RecipePanel>
+        </div>
+        <div className="bottomBar">
+          <Button className="githubButton" startIcon={<GitHubIcon />} href="https://github.com/jeremymec/new-world-calculator" target="_blank">Github</Button>
+          <Button className="githubButton" startIcon={<InfoIcon />} onClick={() => {setAboutOpen(true)}}>About</Button>
+        </div>
       </div>
     </ThemeProvider>
   );
