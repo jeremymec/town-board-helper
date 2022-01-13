@@ -2,7 +2,8 @@
 
 This app is hosted at [townboard.redpanda.dev](http://townboard.redpanda.dev)  
 
-New World Town Board Helper is a simple app intended for one thing - the speedy lookup of how to craft an item required by the town board in the MMORPG [New World](https://www.newworld.com/en-us/).   
+New World Town Board Helper is a simple app intended for one thing - the speedy lookup of how to craft an item required by the town board in the MMORPG [New World](https://www.newworld.com/en-us/).  
+
 Enter the name of the item you need to craft and click the green plus button to the right to open the corresponding recipe.
 You can adjust the desired quantity of the parent item by changing the number next to the title, which will propagate this quantity change to the items in the recipe.
 
