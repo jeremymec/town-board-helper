@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-
-import { Filter } from "../app/app";
-import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import React from "react";
+import { Filter } from "../app/app";
 
 interface RecipeFilterProps {
-  filter: Filter,
-  setFilter: (filter: Filter) => void
+  filter: Filter;
+  setFilter: (filter: Filter) => void;
 }
 
 function RecipeFilter(props: RecipeFilterProps) {

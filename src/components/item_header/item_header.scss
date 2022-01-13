@@ -1,28 +1,27 @@
 .itemHeaderContainer {
-
-    display: flex;
-    flex-direction: row;
-    flex-basis: auto;
-    justify-content: center;
-    align-items: center;
-    width: 97%;
-    padding-left: 2vh;
-    padding-right: 2vh;
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  justify-content: center;
+  align-items: center;
+  width: 97%;
+  padding-left: 2vh;
+  padding-right: 2vh;
 }
 
 .itemHeaderName {
-    font-size: 2.5vh;
-    color: lightgrey;
-    font-family: 'IM Fell DW Pica';
-    display: inline-block;
-    white-space: nowrap;
+  font-size: 2.5vh;
+  color: lightgrey;
+  font-family: "IM Fell DW Pica";
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .itemHeaderQuantity {
-    font-size: 2.25vh;
+  font-size: 2.25vh;
 }
 
 .itemHeaderQuantityContainer {
-    padding-left: 1vh;
-    max-width: 7vh;
+  padding-left: 1vh;
+  max-width: 7vh;
 }

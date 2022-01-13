@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { CategoryModel } from "../../../services/category_service";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import Collaspe from "@mui/material/Collapse";
 import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import React, { useState } from "react";
+import { CategoryModel } from "../../../services/category_service";
 import ItemImage from "../../item_image/item_image";
 import Item from "../item";
 
@@ -25,10 +25,12 @@ function ItemCategory(props: ItemCategoryProps) {
   };
 
   const regular_item_style = {
-    fontSize: "18px"
-  }
+    fontSize: "18px",
+  };
 
-  const itemText = `\u00A0${props.category.name}` + (props.category ? `\u00A0\u00A0x${props.quantity}` : '');
+  const itemText =
+    `\u00A0${props.category.name}` +
+    (props.category ? `\u00A0\u00A0x${props.quantity}` : "");
 
   return (
     <List disablePadding>
@@ -37,7 +39,12 @@ function ItemCategory(props: ItemCategoryProps) {
           <ListItemAvatar>
             <ItemImage item={props.category}></ItemImage>
           </ListItemAvatar>
-          <ListItemText className="itemNameText" primaryTypographyProps={{style:regular_item_style}}>{itemText}</ListItemText>
+          <ListItemText
+            className="itemNameText"
+            primaryTypographyProps={{ style: regular_item_style }}
+          >
+            {itemText}
+          </ListItemText>
           {open ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
       </ListItemButton>
@@ -46,7 +53,7 @@ function ItemCategory(props: ItemCategoryProps) {
           {props.category.items.map((item, key) => {
             return (
               <ListItem key={key} className={"itemListItem category"}>
-                <Item item={item} is_category_item={true} key={key}/>
+                <Item item={item} is_category_item={true} key={key} />
               </ListItem>
             );
           })}

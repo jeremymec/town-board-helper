@@ -1,23 +1,23 @@
 .appContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .searchContainer {
-    text-align: center;
-    min-width: 80vh;
+  text-align: center;
+  min-width: 80vh;
 }
 
 .mainContent {
-    min-height: 96vh;
-    height: auto;
-    text-align: center;
+  min-height: 96vh;
+  height: auto;
+  text-align: center;
 }
 
 .bottomBar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

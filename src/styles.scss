@@ -1,36 +1,34 @@
-@use 'components/app/app.scss';
-@use 'components/item/item.scss';
-@use 'components/item_header/item_header.scss';
-@use 'components/item_image/item_image.scss';
-@use 'components/recipe_info/recipe_info.scss';
-@use 'components/recipe_picker/recipe_picker.scss';
-@use 'components/recipe_panel/recipe_panel.scss';
-@use 'components/recipe_filter/recipe_filter.scss';
-@use 'components/about_dialog/about_dialog.scss';
+@use "components/app/app.scss";
+@use "components/item/item.scss";
+@use "components/item_header/item_header.scss";
+@use "components/item_image/item_image.scss";
+@use "components/recipe_info/recipe_info.scss";
+@use "components/recipe_picker/recipe_picker.scss";
+@use "components/recipe_panel/recipe_panel.scss";
+@use "components/recipe_filter/recipe_filter.scss";
+@use "components/about_dialog/about_dialog.scss";
 
-
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
-
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica");
 
 #body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #292f36;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #292f36;
 }
 
 .itemContainer {
-    display: flex;
-    flex-direction: row;
-    padding-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10vh;
 }
 
 .recipe {
-    padding-top: 15%;
+  padding-top: 15%;
 }
 
 .recipeText {
-    padding-left: 1vh;
-    font-size: 1.5vh;
-    color: lightgrey;
+  padding-left: 1vh;
+  font-size: 1.5vh;
+  color: lightgrey;
 }

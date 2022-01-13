@@ -1,13 +1,14 @@
+import DeleteIcon from "@mui/icons-material/Delete";
+import IconButton from "@mui/material/IconButton";
+import React from "react";
 import { RecipeModel } from "../../services/recipe_service";
 import RecipeInfo from "../recipe_info/recipe_info";
 
-import IconButton from "@mui/material/IconButton";
-import DeleteIcon from "@mui/icons-material/Delete";
-import React from "react";
-
 interface RecipePanelProps {
   selectedRecipes: [RecipeModel, number][];
-  setSelectedRecipes: React.Dispatch<React.SetStateAction<[RecipeModel, number][]>>;
+  setSelectedRecipes: React.Dispatch<
+    React.SetStateAction<[RecipeModel, number][]>
+  >;
 }
 
 function RecipePanel(props: RecipePanelProps) {
@@ -16,7 +17,11 @@ function RecipePanel(props: RecipePanelProps) {
     targetRecipeCounter: number
   ) => {
     e.preventDefault();
-    props.setSelectedRecipes(props.selectedRecipes.filter(([recipe, counter]) => counter !== targetRecipeCounter))
+    props.setSelectedRecipes(
+      props.selectedRecipes.filter(
+        ([recipe, counter]) => counter !== targetRecipeCounter
+      )
+    );
   };
 
   return (
@@ -27,7 +32,7 @@ function RecipePanel(props: RecipePanelProps) {
             <div id="deleteIconContainer">
               <IconButton
                 id="deleteIcon"
-                color='error'
+                color="error"
                 onClick={(e) => {
                   deleteButtonCallback(e, counter);
                 }}
