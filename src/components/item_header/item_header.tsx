@@ -15,7 +15,7 @@ function ItemHeader(props: ItemHeaderProps) {
 
     const inputProps: InputBaseComponentProps = {
         style: {
-            fontSize: '2.5vh',
+            fontSize: '2vh',
             //fontFamily: 'IM Fell DW Pica'
         },
         inputMode: "numeric",

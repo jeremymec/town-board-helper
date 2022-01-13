@@ -1,7 +1,6 @@
 #recipePanel {
     display: inline-flex;
     flex-direction: row;
-    overflow: visible;
     max-width: 80%;
 }
 
@@ -23,8 +22,8 @@
 }
 
 #deleteIcon {
-    margin: -2.5vh;
-    margin-top: -2vh;
+    margin: -1%;
+    margin-top: -1.5%;
     position: absolute;
     border-radius: 10px;
 }
