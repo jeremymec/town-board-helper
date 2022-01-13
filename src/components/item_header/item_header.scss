@@ -5,12 +5,12 @@
   justify-content: center;
   align-items: center;
   width: 97%;
-  padding-left: 2vh;
-  padding-right: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 .itemHeaderName {
-  font-size: 2.5vh;
+  font-size: 2rem;
   color: lightgrey;
   font-family: "IM Fell DW Pica";
   display: inline-block;
@@ -18,10 +18,10 @@
 }
 
 .itemHeaderQuantity {
-  font-size: 2.25vh;
+  font-size: 2.25rem;
 }
 
 .itemHeaderQuantityContainer {
-  padding-left: 1vh;
-  max-width: 7vh;
+  padding-left: 1vw;
+  max-width: 7vw;
 }

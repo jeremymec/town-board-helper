@@ -13,7 +13,7 @@ interface ItemHeaderProps {
 function ItemHeader(props: ItemHeaderProps) {
   const inputProps: InputBaseComponentProps = {
     style: {
-      fontSize: "2vh",
+      fontSize: "1.5em",
       //fontFamily: 'IM Fell DW Pica'
     },
     inputMode: "numeric",

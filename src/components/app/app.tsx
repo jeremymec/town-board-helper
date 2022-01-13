@@ -44,7 +44,6 @@ function App() {
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
-      <div className="appContainer">
         <AboutDialog
           open={aboutOpen}
           closeCallback={onAboutDialogClose}
@@ -84,7 +83,6 @@ function App() {
             About
           </Button>
         </div>
-      </div>
     </ThemeProvider>
   );
 }
