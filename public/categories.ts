@@ -1,6 +1,4 @@
-import { DefaultComponentProps } from "@mui/material/OverridableComponent";
-
-var cat = [
+const categories = [
   { name: "Tier 1 Meats", id: "rawfoodtier" },
   { name: "Raw Meats", id: "rawfoodtier" },
   { name: "Raw Foods", id: "rawfoodtier" },
@@ -449,4 +447,4 @@ var cat = [
   { name: "Tier 4 Protective Reagents", id: "rawfoodtier" },
 ];
 
-export default cat;
+export default categories;

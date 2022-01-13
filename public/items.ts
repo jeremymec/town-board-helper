@@ -1,4 +1,4 @@
-var items = [
+const items = [
   {
     id: "workorder_faction_provisions01_t1",
     name: "Cooking Recipe",

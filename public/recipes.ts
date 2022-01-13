@@ -1,4 +1,4 @@
-var recipes = [
+const recipes = [
   {
     base_recipe: true,
     crafting_category: "Cooking",
