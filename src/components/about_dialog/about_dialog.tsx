@@ -17,10 +17,10 @@ function AboutDialog(props: AboutDialogProps) {
       onClose={props.closeCallback}
       maxWidth="md"
     >
-      <DialogTitle>About New World Calculator</DialogTitle>
+      <DialogTitle>About Town Board Helper</DialogTitle>
       <DialogContent>
         <Typography>
-          New World Calculator is a simple app intended for one thing - the
+          New World Town Board Helper is a simple app intended for one thing - the
           speedy lookup of how to craft an item required by the town board.
           Enter the name of the item you need to craft and click the green plus
           button to the right to open the corresponding recipe.
@@ -35,7 +35,7 @@ function AboutDialog(props: AboutDialogProps) {
           This is a proof of concept made by a fan of the game. Please pass any
           feedback / feature requests on by opening an issue on the{" "}
           <Link
-            href="https://github.com/jeremymec/new-world-calculator"
+            href="https://github.com/jeremymec/town-board-helper"
             target="_blank"
           >
             public Github.

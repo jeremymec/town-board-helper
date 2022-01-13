@@ -69,7 +69,7 @@ function App() {
           <Button
             className="githubButton"
             startIcon={<GitHubIcon />}
-            href="https://github.com/jeremymec/new-world-calculator"
+            href="https://github.com/jeremymec/town-board-helper"
             target="_blank"
           >
             Github
