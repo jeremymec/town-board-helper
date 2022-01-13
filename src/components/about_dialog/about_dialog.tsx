@@ -45,7 +45,7 @@ function AboutDialog(props: AboutDialogProps) {
         <Typography>
           All item names, recipes, and images used are the property of their
           respective copyright holders. This website is open source and free
-          from monetization. It is purely static, and does not record any data.
+          from monetization. It is purely static, and does not record any of your searches.
         </Typography>
       </DialogContent>
     </Dialog>
