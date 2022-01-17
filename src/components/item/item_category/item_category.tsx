@@ -33,9 +33,9 @@ function ItemCategory(props: ItemCategoryProps) {
     (props.category ? `\u00A0\u00A0x${props.quantity}` : "");
 
   return (
-    <List disablePadding>
+    <List disablePadding dense className="item">
       <ListItemButton onClick={handleClick}>
-        <ListItem className="item" key={props.item_key}>
+        <ListItem>
           <ListItemAvatar>
             <ItemImage item={props.category}></ItemImage>
           </ListItemAvatar>
@@ -52,9 +52,9 @@ function ItemCategory(props: ItemCategoryProps) {
         <List disablePadding>
           {props.category.items.map((item, key) => {
             return (
-              <ListItem key={key} className={"itemListItem category"}>
+              // <ListItem key={key} className={"itemListItem category"}>
                 <Item item={item} is_category_item={true} key={key} />
-              </ListItem>
+              // </ListItem>
             );
           })}
         </List>

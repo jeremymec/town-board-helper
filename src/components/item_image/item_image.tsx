@@ -1,3 +1,4 @@
+import Avatar from '@mui/material/Avatar';
 import { CategoryModel } from "../../services/category_service";
 import { ItemModel } from "../../services/item_service";
 
@@ -6,7 +7,9 @@ interface ItemImageProps {
 }
 
 function ItemImage(props: ItemImageProps) {
-  return <img className="itemImage" src={`images/${props.item.id}.png`}></img>;
+  return (
+    <Avatar className="itemImage" variant="square" src={`images/${props.item.id}.png`} />
+  )
 }
 
 export default ItemImage;

@@ -1,18 +1,16 @@
-.componentName {
-  padding-left: 1vw;
-}
-
 .itemListItem {
   padding-top: 0%;
   padding-bottom: 0%;
 }
 
 .itemNameText {
-  display: block;
-  width: 100%;
+  display: inline;
 }
 
 .item {
+  display: block;
   width: 100%;
-  padding-left: 24px;
+  padding-left: 5%;
+  margin-top: 2%;
+  // background-color: red;
 }

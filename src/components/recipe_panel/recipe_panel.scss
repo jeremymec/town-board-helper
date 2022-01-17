@@ -2,28 +2,30 @@
   display: inline-flex;
   flex-direction: row;
   max-width: 80%;
+  margin-top: 3%;
 }
 
 #panelItem {
-  margin: 3vh;
-  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  position: relative;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 3%;
   border-style: dashed;
   border-width: 1px;
   border-radius: 5px;
   border-color: darkgrey;
-  display: flex;
-  flex-direction: column;
-  height: min-content;
 }
 
 #deleteIconContainer {
-  width: 100%;
-  text-align: right;
+  // width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 #deleteIcon {
-  margin: -1%;
-  margin-top: -1.5%;
-  position: absolute;
   border-radius: 10px;
 }

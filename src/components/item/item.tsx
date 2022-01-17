@@ -42,7 +42,7 @@ function Item(props: ItemProps) {
   };
 
   const regular_item_style = {
-    fontSize: "18px",
+    fontSize: "1em",
   };
 
   const trailing_spaces_count = 4 - String(props.quantity ?? 0).length;

@@ -44,6 +44,7 @@ function ItemHeader(props: ItemHeaderProps) {
       </Typography>
       <div className="itemHeaderQuantityContainer">
         <TextField
+          className="itemHeaderQuantity"
           inputProps={inputProps}
           fullWidth={true}
           size={"small"}
