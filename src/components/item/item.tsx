@@ -1,5 +1,6 @@
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import { useMediaQuery, useTheme } from "@mui/material";
 import Collaspe from "@mui/material/Collapse";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -26,6 +27,9 @@ interface ItemProps {
 function Item(props: ItemProps) {
   const [recipe, setRecipe] = useState<RecipeModel | null>(null);
   const [open, setOpen] = useState(props.start_open ?? false);
+
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
   if (!props.is_category_item) {
     get_recipe_from_output_name(props.item.name).then((recipe) => {
@@ -63,6 +67,7 @@ function Item(props: ItemProps) {
           </ListItemAvatar>
           <ListItemText
             className="itemNameText"
+            style={matches ? {whiteSpace: "nowrap"} : {}}
             primaryTypographyProps={{
               style: props.is_category_item
                 ? category_item_style

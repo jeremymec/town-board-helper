@@ -1,4 +1,5 @@
 import DeleteIcon from "@mui/icons-material/Delete";
+import { useMediaQuery, useTheme } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import React from "react";
 import { RecipeModel } from "../../services/recipe_service";
@@ -24,11 +25,14 @@ function RecipePanel(props: RecipePanelProps) {
     );
   };
 
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   return (
-    <div id="recipePanel">
+    <div id="recipePanel" style={matches ? {} : {maxWidth: '100%', flexDirection: "column"}}>
       {props.selectedRecipes.map(([recipe, counter]) => {
         return (
-          <div id="panelItem" key={counter}>
+          <div id="panelItem" key={counter} style={matches ? {} : {minWidth: '100vw'}}>
             <div id="deleteIconContainer">
               <IconButton
                 id="deleteIcon"

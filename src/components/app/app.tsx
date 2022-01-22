@@ -1,5 +1,6 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InfoIcon from "@mui/icons-material/Info";
+import { useMediaQuery } from "@mui/material";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -40,6 +41,8 @@ function App() {
   const onAboutDialogClose = () => {
     setAboutOpen(false);
   };
+  
+  const matches = useMediaQuery(muiTheme.breakpoints.up("sm"));
 
   return (
     <ThemeProvider theme={muiTheme}>
@@ -49,7 +52,7 @@ function App() {
           closeCallback={onAboutDialogClose}
         ></AboutDialog>
         <div className="mainContent">
-          <div className="searchContainer">
+            <div className="searchContainer" style={matches ? {} : {width: '90%'}}>
             <RecipePicker
               recipes={recipes}
               selectedRecipes={selectedRecipes}

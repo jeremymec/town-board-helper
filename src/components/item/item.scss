@@ -5,6 +5,7 @@
 
 .itemNameText {
   display: inline;
+  // white-space: nowrap;
 }
 
 .item {
@@ -12,5 +13,4 @@
   width: 100%;
   padding-left: 5%;
   margin-top: 2%;
-  // background-color: red;
 }

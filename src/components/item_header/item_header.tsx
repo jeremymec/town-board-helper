@@ -1,3 +1,4 @@
+import { useMediaQuery, useTheme } from "@mui/material";
 import { InputBaseComponentProps } from "@mui/material/InputBase";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
@@ -11,9 +12,13 @@ interface ItemHeaderProps {
 }
 
 function ItemHeader(props: ItemHeaderProps) {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   const inputProps: InputBaseComponentProps = {
     style: {
       fontSize: "1.5em",
+      width: "1.5em"
       //fontFamily: 'IM Fell DW Pica'
     },
     inputMode: "numeric",
@@ -38,8 +43,7 @@ function ItemHeader(props: ItemHeaderProps) {
 
   return (
     <div className="itemHeaderContainer">
-      {/* {<img className="itemImage" src={`${props.item?.id}.png`}></img>} */}
-      <Typography className="itemHeaderName">
+      <Typography className="itemHeaderName" style={matches ? {whiteSpace: "nowrap"} : {}}>
         {props.item?.name} &nbsp;x
       </Typography>
       <div className="itemHeaderQuantityContainer">

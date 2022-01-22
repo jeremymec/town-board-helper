@@ -1,23 +1,20 @@
 .itemHeaderContainer {
   display: flex;
-  flex-direction: row;
-  flex-basis: auto;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  background-color: red;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .itemHeaderName {
-  font-size: 2rem;
+  display: inline-block;
+  font-size: 1.8rem;
   color: lightgrey;
   font-family: "IM Fell DW Pica";
-  display: inline-block;
-  white-space: nowrap;
+  line-height: 100%;
 }
 
 .itemHeaderQuantityContainer {
-  margin-left: 5%;
-  background-color: black;
-  max-width: 13%;
+  display: inline-block;
+  margin-left: 1rem;
 }
