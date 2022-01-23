@@ -20,8 +20,8 @@ function AboutDialog(props: AboutDialogProps) {
       <DialogTitle>About Town Board Helper</DialogTitle>
       <DialogContent>
         <Typography>
-          New World Town Board Helper is a simple app intended for one thing - the
-          speedy lookup of how to craft an item required by the town board.
+          New World Town Board Helper is a simple app intended for one thing -
+          the speedy lookup of how to craft an item required by the town board.
           Enter the name of the item you need to craft and click the green plus
           button to the right to open the corresponding recipe.
         </Typography>
@@ -45,7 +45,8 @@ function AboutDialog(props: AboutDialogProps) {
         <Typography>
           All item names, recipes, and images used are the property of their
           respective copyright holders. This website is open source and free
-          from monetization. It is purely static, and does not record any of your searches.
+          from monetization. It is purely static, and does not record any of
+          your searches.
         </Typography>
       </DialogContent>
     </Dialog>

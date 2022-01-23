@@ -53,7 +53,7 @@ function ItemCategory(props: ItemCategoryProps) {
           {props.category.items.map((item, key) => {
             return (
               // <ListItem key={key} className={"itemListItem category"}>
-                <Item item={item} is_category_item={true} key={key} />
+              <Item item={item} is_category_item={true} key={key} />
               // </ListItem>
             );
           })}

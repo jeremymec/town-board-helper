@@ -11,7 +11,7 @@ import { useState } from "react";
 import { ItemModel } from "../../services/item_service";
 import {
   get_recipe_from_output_name,
-  RecipeModel
+  RecipeModel,
 } from "../../services/recipe_service";
 import ItemImage from "../item_image/item_image";
 import ItemCategory from "./item_category/item_category";
@@ -67,7 +67,7 @@ function Item(props: ItemProps) {
           </ListItemAvatar>
           <ListItemText
             className="itemNameText"
-            style={matches ? {whiteSpace: "nowrap"} : {}}
+            style={matches ? { whiteSpace: "nowrap" } : {}}
             primaryTypographyProps={{
               style: props.is_category_item
                 ? category_item_style

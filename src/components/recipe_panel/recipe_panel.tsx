@@ -29,10 +29,17 @@ function RecipePanel(props: RecipePanelProps) {
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
   return (
-    <div id="recipePanel" style={matches ? {} : {maxWidth: '100%', flexDirection: "column"}}>
+    <div
+      id="recipePanel"
+      style={matches ? {} : { maxWidth: "100%", flexDirection: "column" }}
+    >
       {props.selectedRecipes.map(([recipe, counter]) => {
         return (
-          <div id="panelItem" key={counter} style={matches ? {} : {minWidth: '100vw'}}>
+          <div
+            id="panelItem"
+            key={counter}
+            style={matches ? {} : { minWidth: "100vw" }}
+          >
             <div id="deleteIconContainer">
               <IconButton
                 id="deleteIcon"

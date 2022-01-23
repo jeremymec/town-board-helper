@@ -18,7 +18,7 @@ function ItemHeader(props: ItemHeaderProps) {
   const inputProps: InputBaseComponentProps = {
     style: {
       fontSize: "1.5em",
-      width: "1.5em"
+      width: "1.5em",
       //fontFamily: 'IM Fell DW Pica'
     },
     inputMode: "numeric",
@@ -43,7 +43,10 @@ function ItemHeader(props: ItemHeaderProps) {
 
   return (
     <div className="itemHeaderContainer">
-      <Typography className="itemHeaderName" style={matches ? {whiteSpace: "nowrap"} : {}}>
+      <Typography
+        className="itemHeaderName"
+        style={matches ? { whiteSpace: "nowrap" } : {}}
+      >
         {props.item?.name}
       </Typography>
       <div className="itemHeaderQuantityContainer">

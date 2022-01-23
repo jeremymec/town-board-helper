@@ -21,26 +21,24 @@ function RecipeFilter(props: RecipeFilterProps) {
 
   return (
     <div className="recipeFilter">
-      <ToggleButtonGroup
-        onChange={handleChange}
-        value={props.filter}
-        exclusive
-      >
+      <ToggleButtonGroup onChange={handleChange} value={props.filter} exclusive>
         <ToggleButton value="Cooking">
           <img className="filterIcon" src="./icons/cooking.svg" />
-          { matches && <Typograpgy className="filterText">Cooking</Typograpgy>} 
+          {matches && <Typograpgy className="filterText">Cooking</Typograpgy>}
         </ToggleButton>
         <ToggleButton value="Weaponsmithing">
           <img className="filterIcon" src="./icons/weaponsmithing.svg" />
-          { matches && <Typograpgy className="filterText">Weaponsmithing</Typograpgy>} 
+          {matches && (
+            <Typograpgy className="filterText">Weaponsmithing</Typograpgy>
+          )}
         </ToggleButton>
         <ToggleButton value="Armoring">
           <img className="filterIcon" src="./icons/armoring.svg" />
-          { matches && <Typograpgy className="filterText">Armoring</Typograpgy>} 
+          {matches && <Typograpgy className="filterText">Armoring</Typograpgy>}
         </ToggleButton>
         <ToggleButton value="Alchemy">
           <img className="filterIcon" src="./icons/arcana.svg" />
-          { matches && <Typograpgy className="filterText">Arcana</Typograpgy>} 
+          {matches && <Typograpgy className="filterText">Arcana</Typograpgy>}
         </ToggleButton>
       </ToggleButtonGroup>
     </div>
