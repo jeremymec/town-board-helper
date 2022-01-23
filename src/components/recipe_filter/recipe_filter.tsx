@@ -1,9 +1,10 @@
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import Typograpgy from "@mui/material/Typography";
 import React from "react";
 import { Filter } from "../app/app";
-import { useTheme } from "@mui/material/styles";
-import { useMediaQuery } from "@mui/material";
 
 interface RecipeFilterProps {
   filter: Filter;
@@ -23,13 +24,24 @@ function RecipeFilter(props: RecipeFilterProps) {
       <ToggleButtonGroup
         onChange={handleChange}
         value={props.filter}
-        orientation={matches ? "horizontal" : "vertical"}
         exclusive
       >
-        <ToggleButton value="Cooking">Cooking</ToggleButton>
-        <ToggleButton value="Weaponsmithing">Weaponsmithing</ToggleButton>
-        <ToggleButton value="Armoring">Armoring</ToggleButton>
-        <ToggleButton value="Alchemy">Alchemy</ToggleButton>
+        <ToggleButton value="Cooking">
+          <img className="filterIcon" src="./icons/cooking.svg" />
+          { matches && <Typograpgy className="filterText">Cooking</Typograpgy>} 
+        </ToggleButton>
+        <ToggleButton value="Weaponsmithing">
+          <img className="filterIcon" src="./icons/weaponsmithing.svg" />
+          { matches && <Typograpgy className="filterText">Weaponsmithing</Typograpgy>} 
+        </ToggleButton>
+        <ToggleButton value="Armoring">
+          <img className="filterIcon" src="./icons/armoring.svg" />
+          { matches && <Typograpgy className="filterText">Armoring</Typograpgy>} 
+        </ToggleButton>
+        <ToggleButton value="Alchemy">
+          <img className="filterIcon" src="./icons/arcana.svg" />
+          { matches && <Typograpgy className="filterText">Arcana</Typograpgy>} 
+        </ToggleButton>
       </ToggleButtonGroup>
     </div>
   );

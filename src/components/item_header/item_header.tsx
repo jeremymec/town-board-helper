@@ -44,9 +44,10 @@ function ItemHeader(props: ItemHeaderProps) {
   return (
     <div className="itemHeaderContainer">
       <Typography className="itemHeaderName" style={matches ? {whiteSpace: "nowrap"} : {}}>
-        {props.item?.name} &nbsp;x
+        {props.item?.name}
       </Typography>
       <div className="itemHeaderQuantityContainer">
+        <Typography className="itemQuantityPreText">x</Typography>
         <TextField
           className="itemHeaderQuantity"
           inputProps={inputProps}

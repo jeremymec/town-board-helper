@@ -15,6 +15,14 @@
 }
 
 .itemHeaderQuantityContainer {
-  display: inline-block;
+  display: inline-flex;
   margin-left: 1rem;
+  align-items: center;
+}
+
+.itemQuantityPreText {
+  font-size: 1.8rem;
+  color: lightgrey;
+  font-family: "IM Fell DW Pica";
+  margin-right: 1rem;
 }

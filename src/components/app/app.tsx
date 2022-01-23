@@ -41,51 +41,54 @@ function App() {
   const onAboutDialogClose = () => {
     setAboutOpen(false);
   };
-  
+
   const matches = useMediaQuery(muiTheme.breakpoints.up("sm"));
 
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
-        <AboutDialog
-          open={aboutOpen}
-          closeCallback={onAboutDialogClose}
-        ></AboutDialog>
-        <div className="mainContent">
-            <div className="searchContainer" style={matches ? {} : {width: '90%'}}>
-            <RecipePicker
-              recipes={recipes}
-              selectedRecipes={selectedRecipes}
-              setSelectedRecipes={setSelectedRecipes}
-              value={recipeValue}
-              setValue={setRecipeValue}
-            ></RecipePicker>
-            <RecipeFilter filter={filter} setFilter={onFilterChange} />
-          </div>
-          <RecipePanel
+      <AboutDialog
+        open={aboutOpen}
+        closeCallback={onAboutDialogClose}
+      ></AboutDialog>
+      <div className="mainContent">
+        <div
+          className="searchContainer"
+          style={matches ? {} : { width: "90%" }}
+        >
+          <RecipePicker
+            recipes={recipes}
             selectedRecipes={selectedRecipes}
             setSelectedRecipes={setSelectedRecipes}
-          ></RecipePanel>
+            value={recipeValue}
+            setValue={setRecipeValue}
+          ></RecipePicker>
+          <RecipeFilter filter={filter} setFilter={onFilterChange} />
         </div>
-        <div className="bottomBar">
-          <Button
-            className="githubButton"
-            startIcon={<GitHubIcon />}
-            href="https://github.com/jeremymec/town-board-helper"
-            target="_blank"
-          >
-            Github
-          </Button>
-          <Button
-            className="githubButton"
-            startIcon={<InfoIcon />}
-            onClick={() => {
-              setAboutOpen(true);
-            }}
-          >
-            About
-          </Button>
-        </div>
+        <RecipePanel
+          selectedRecipes={selectedRecipes}
+          setSelectedRecipes={setSelectedRecipes}
+        ></RecipePanel>
+      </div>
+      <div className="bottomBar">
+        <Button
+          className="githubButton"
+          startIcon={<GitHubIcon />}
+          href="https://github.com/jeremymec/town-board-helper"
+          target="_blank"
+        >
+          Github
+        </Button>
+        <Button
+          className="githubButton"
+          startIcon={<InfoIcon />}
+          onClick={() => {
+            setAboutOpen(true);
+          }}
+        >
+          About
+        </Button>
+      </div>
     </ThemeProvider>
   );
 }

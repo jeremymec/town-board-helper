@@ -1,7 +1,9 @@
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import { useMediaQuery } from "@mui/material";
 import AutoComplete from "@mui/material/Autocomplete";
 import IconButton from "@mui/material/IconButton";
 import TextField from "@mui/material/TextField";
+import { useTheme } from "@mui/system";
 import React, { useState } from "react";
 import { RecipeModel } from "../../services/recipe_service";
 
@@ -16,6 +18,9 @@ interface RecipePickerProps {
 }
 
 function RecipePicker(props: RecipePickerProps) {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+
   const recipeNames = props.recipes.map((recipe) => recipe.output.name);
 
   const [recipeTextValue, setRecipeTextValue] = useState<string | null>("");
@@ -25,8 +30,8 @@ function RecipePicker(props: RecipePickerProps) {
     setRecipeCounter(recipeCounter + 1);
   };
 
-  const buttonCallback = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const selectedRecipe = props.recipes.find(
       (recipe) => recipe.output.name == recipeTextValue
     );
@@ -40,7 +45,8 @@ function RecipePicker(props: RecipePickerProps) {
   };
 
   return (
-    <div id="recipePicker">
+    // <div id="recipePicker">
+    <form onSubmit={handleSubmit} id="recipePicker">
       <AutoComplete
         className="itemSelect"
         options={recipeNames}
@@ -50,10 +56,16 @@ function RecipePicker(props: RecipePickerProps) {
           setRecipeTextValue(newValue);
         }}
       />
-      <IconButton className="goButton" onClick={buttonCallback} color="success">
+      <IconButton
+        type="submit"
+        className="goButton"
+        color="success"
+        style={matches ? {} : { display: "none" }}
+      >
         <AddBoxIcon fontSize="large" />
       </IconButton>
-    </div>
+    </form>
+    // </div>
   );
 }
 
