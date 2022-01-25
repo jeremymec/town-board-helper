@@ -31,7 +31,7 @@ function RecipePanel(props: RecipePanelProps) {
   return (
     <div
       id="recipePanel"
-      style={matches ? {} : { maxWidth: "100%", flexDirection: "column" }}
+      style={matches ? {} : { maxWidth: "100%", flexDirection: "column-reverse" }}
     >
       {props.selectedRecipes.map(([recipe, counter]) => {
         return (

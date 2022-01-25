@@ -1,10 +1,10 @@
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import { useMediaQuery } from "@mui/material";
-import AutoComplete from "@mui/material/Autocomplete";
+import AutoComplete, { AutocompleteCloseReason } from "@mui/material/Autocomplete";
 import IconButton from "@mui/material/IconButton";
 import TextField from "@mui/material/TextField";
 import { useTheme } from "@mui/system";
-import React, { useState } from "react";
+import React, { SyntheticEvent, useEffect, useState } from "react";
 import { RecipeModel } from "../../services/recipe_service";
 
 interface RecipePickerProps {
@@ -26,12 +26,25 @@ function RecipePicker(props: RecipePickerProps) {
   const [recipeTextValue, setRecipeTextValue] = useState<string | null>("");
   const [recipeCounter, setRecipeCounter] = useState(0);
 
+  const [pickerSelectManualState, setPickerSelectManualState] = useState(false);
+
   const incrementRecipeCounter = () => {
     setRecipeCounter(recipeCounter + 1);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    selectCurrentRecipe();
+  };
+
+  useEffect(() => {
+    if (pickerSelectManualState) {
+      selectCurrentRecipe();
+      setPickerSelectManualState(false);
+    }
+  }, [recipeTextValue])
+
+  const selectCurrentRecipe = () => {
     const selectedRecipe = props.recipes.find(
       (recipe) => recipe.output.name == recipeTextValue
     );
@@ -42,7 +55,7 @@ function RecipePicker(props: RecipePickerProps) {
       ]);
       incrementRecipeCounter();
     }
-  };
+  }
 
   return (
     // <div id="recipePicker">
@@ -52,7 +65,14 @@ function RecipePicker(props: RecipePickerProps) {
         options={recipeNames}
         renderInput={(params) => <TextField {...params} label="Recipes" />}
         value={recipeTextValue}
+        blurOnSelect={true}
+        onClose={(event: SyntheticEvent<Element, Event>, reason: AutocompleteCloseReason) => {
+          if (reason === "selectOption") {
+            setPickerSelectManualState(true);
+          }
+        }}
         onChange={(event: any, newValue: string | null) => {
+          console.log("On Change Called!");
           setRecipeTextValue(newValue);
         }}
       />
