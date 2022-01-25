@@ -2140,7 +2140,7 @@ const recipes = [
     category_components: ["Wood (PRIMARY)", "Wood (PRIMARY)"],
   },
   {
-    base_recipe: false,
+    base_recipe: true,
     crafting_category: "None",
     output: "Steel Ingot",
     components: [
@@ -2176,7 +2176,7 @@ const recipes = [
     category_components: [],
   },
   {
-    base_recipe: false,
+    base_recipe: true,
     crafting_category: "None",
     output: "Starmetal Ingot",
     components: [
