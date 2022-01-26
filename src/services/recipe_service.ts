@@ -26,7 +26,6 @@ export function get_recipes(): RecipeModel[] {
 }
 
 export function get_base_recipes(filter: Filter): RecipeModel[] {
-  // console.log("Get Base Recipes called with", filter)
 
   const recipes = get_recipe_data();
 
@@ -45,7 +44,6 @@ export async function get_recipe_from_output_name(
   if (result) {
     return result;
   } else {
-    // throw new Error("Error - could not find a recipe with that name");
     return null;
   }
 }

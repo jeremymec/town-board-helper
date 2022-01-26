@@ -19,7 +19,6 @@ function ItemHeader(props: ItemHeaderProps) {
     style: {
       fontSize: "1.5em",
       width: "1.5em",
-      //fontFamily: 'IM Fell DW Pica'
     },
     inputMode: "numeric",
     pattern: "[0-9]*",

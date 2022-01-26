@@ -84,13 +84,11 @@ function Item(props: ItemProps) {
           {recipe &&
             recipe.components.map((component, key) => {
               return (
-                // <ListItem key={key} className={"itemListItem"}>
                 <Item
                   item={component.item}
                   quantity={(component.quantity ?? 1) * (props.quantity ?? 1)}
                   key={key}
                 />
-                // </ListItem>
               );
             })}
           {recipe &&

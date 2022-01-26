@@ -1,6 +1,8 @@
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import { useMediaQuery } from "@mui/material";
-import AutoComplete, { AutocompleteCloseReason } from "@mui/material/Autocomplete";
+import AutoComplete, {
+  AutocompleteCloseReason
+} from "@mui/material/Autocomplete";
 import IconButton from "@mui/material/IconButton";
 import TextField from "@mui/material/TextField";
 import { useTheme } from "@mui/system";
@@ -44,7 +46,7 @@ function RecipePicker(props: RecipePickerProps) {
       selectCurrentRecipe();
       setPickerSelectManualState(false);
     }
-  }, [recipeTextValue])
+  }, [recipeTextValue]);
 
   const selectCurrentRecipe = () => {
     const selectedRecipe = props.recipes.find(
@@ -57,18 +59,22 @@ function RecipePicker(props: RecipePickerProps) {
       ]);
       incrementRecipeCounter();
     }
-  }
+  };
 
   return (
-    // <div id="recipePicker">
     <form onSubmit={handleSubmit} id="recipePicker">
       <AutoComplete
         className="itemSelect"
         options={recipeNames}
-        renderInput={(params) => <TextField {...params} label={(props.filter ?? "")+ " Recipes"} />}
+        renderInput={(params) => (
+          <TextField {...params} label={(props.filter ?? "") + " Recipes"} />
+        )}
         value={recipeTextValue}
         blurOnSelect={true}
-        onClose={(event: SyntheticEvent<Element, Event>, reason: AutocompleteCloseReason) => {
+        onClose={(
+          event: SyntheticEvent<Element, Event>,
+          reason: AutocompleteCloseReason
+        ) => {
           if (reason === "selectOption") {
             setPickerSelectManualState(true);
           }
@@ -86,7 +92,6 @@ function RecipePicker(props: RecipePickerProps) {
         <AddBoxIcon fontSize="large" />
       </IconButton>
     </form>
-    // </div>
   );
 }
 
