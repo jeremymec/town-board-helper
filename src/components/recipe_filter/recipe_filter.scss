@@ -1,8 +1,33 @@
+.recipeFilter {
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 80%;
+  margin-right: 5%;
+}
+
+.filterButton {
+  border-radius: 1px;
+}
+
+// CSS Fix for applying Flex-Wrap to MUI buttons
+.filterButton.Wrapped {
+  border-left: 1px solid rgba(255, 255, 255, 0.12)!important;
+}
+
 .filterIcon {
   width: 2rem;
   height: 2rem;
+  display: none;
 }
 
 .filterText {
-  margin-left: 0.7rem;
+  font-size: 1rem;
+  width: 10vw;
+  // max-width: 0;
+  // display: inline-block;
+  // -webkit-transition: max-width 0.5s;
+  // transition: max-width 0.5s;
+  // vertical-align: top;
+  white-space: pre;
+  // overflow: hidden;
 }

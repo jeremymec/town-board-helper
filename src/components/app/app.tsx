@@ -11,7 +11,16 @@ import RecipeFilter from "../recipe_filter/recipe_filter";
 import RecipePanel from "../recipe_panel/recipe_panel";
 import RecipePicker from "../recipe_picker/recipe_picker";
 
-export type Filter = "" | "Cooking";
+export type Filter =
+  | ""
+  | "Alchemy"
+  | "Armoring"
+  | "Cooking"
+  | "Leatherworking"
+  | "Stonecutting"
+  | "Weaponsmithing"
+  | "Weaving"
+  | "Woodworking";
 
 function App() {
   const [recipeValue, setRecipeValue] = useState<string | null>(null);
@@ -62,6 +71,7 @@ function App() {
             setSelectedRecipes={setSelectedRecipes}
             value={recipeValue}
             setValue={setRecipeValue}
+            filter={filter}
           ></RecipePicker>
           <RecipeFilter filter={filter} setFilter={onFilterChange} />
         </div>

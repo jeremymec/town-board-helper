@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import { useTheme } from "@mui/system";
 import React, { SyntheticEvent, useEffect, useState } from "react";
 import { RecipeModel } from "../../services/recipe_service";
+import { Filter } from "../app/app";
 
 interface RecipePickerProps {
   recipes: RecipeModel[];
@@ -15,6 +16,7 @@ interface RecipePickerProps {
   setSelectedRecipes: React.Dispatch<
     React.SetStateAction<[RecipeModel, number][]>
   >;
+  filter: Filter;
 }
 
 function RecipePicker(props: RecipePickerProps) {
@@ -63,7 +65,7 @@ function RecipePicker(props: RecipePickerProps) {
       <AutoComplete
         className="itemSelect"
         options={recipeNames}
-        renderInput={(params) => <TextField {...params} label="Recipes" />}
+        renderInput={(params) => <TextField {...params} label={(props.filter ?? "")+ " Recipes"} />}
         value={recipeTextValue}
         blurOnSelect={true}
         onClose={(event: SyntheticEvent<Element, Event>, reason: AutocompleteCloseReason) => {
@@ -72,7 +74,6 @@ function RecipePicker(props: RecipePickerProps) {
           }
         }}
         onChange={(event: any, newValue: string | null) => {
-          console.log("On Change Called!");
           setRecipeTextValue(newValue);
         }}
       />
