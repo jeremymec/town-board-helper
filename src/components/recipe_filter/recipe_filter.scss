@@ -6,11 +6,14 @@
 }
 
 .filterButton {
+  min-width: 10vw;
   border-radius: 1px;
+  text-align: center;
+  justify-content: center;
 }
 
 // CSS Fix for applying Flex-Wrap to MUI buttons
-.filterButton.Wrapped {
+.filterButton {
   border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
@@ -22,6 +25,5 @@
 
 .filterText {
   font-size: 1rem;
-  width: 10vw;
   white-space: pre;
 }

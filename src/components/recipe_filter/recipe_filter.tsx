@@ -19,6 +19,8 @@ function RecipeFilter(props: RecipeFilterProps) {
     props.setFilter(newFilter ?? "");
   };
 
+  const buttonMinimumWidth = "12rem";
+
   return (
     <ToggleButtonGroup
       className="recipeFilter"
@@ -26,7 +28,11 @@ function RecipeFilter(props: RecipeFilterProps) {
       value={props.filter}
       exclusive
     >
-      <ToggleButton className="filterButton" value="Alchemy">
+      <ToggleButton
+        className="filterButton"
+        value="Alchemy"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/arcana.svg"
@@ -34,7 +40,11 @@ function RecipeFilter(props: RecipeFilterProps) {
         />
         {matches && <Typograpgy className="filterText"> Arcana</Typograpgy>}
       </ToggleButton>
-      <ToggleButton className="filterButton" value="Armoring">
+      <ToggleButton
+        className="filterButton"
+        value="Armoring"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/armoring.svg"
@@ -42,7 +52,11 @@ function RecipeFilter(props: RecipeFilterProps) {
         />
         {matches && <Typograpgy className="filterText"> Armoring</Typograpgy>}
       </ToggleButton>
-      <ToggleButton className="filterButton" value="Cooking">
+      <ToggleButton
+        className="filterButton"
+        value="Cooking"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/cooking.svg"
@@ -52,7 +66,11 @@ function RecipeFilter(props: RecipeFilterProps) {
           <Typograpgy className="filterText Cooking"> Cooking</Typograpgy>
         )}
       </ToggleButton>
-      <ToggleButton className="filterButton" value="Leatherworking">
+      <ToggleButton
+        className="filterButton"
+        value="Leatherworking"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/leatherworking.svg"
@@ -62,7 +80,11 @@ function RecipeFilter(props: RecipeFilterProps) {
           <Typograpgy className="filterText"> Leatherworking</Typograpgy>
         )}
       </ToggleButton>
-      <ToggleButton className="filterButton Wrapped" value="Stonecutting">
+      <ToggleButton
+        className="filterButton Wrapped"
+        value="Stonecutting"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/stonecutting.svg"
@@ -72,7 +94,11 @@ function RecipeFilter(props: RecipeFilterProps) {
           <Typograpgy className="filterText"> Stonecutting</Typograpgy>
         )}
       </ToggleButton>
-      <ToggleButton className="filterButton" value="Weaponsmithing">
+      <ToggleButton
+        className="filterButton"
+        value="Weaponsmithing"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/weaponsmithing.svg"
@@ -82,7 +108,11 @@ function RecipeFilter(props: RecipeFilterProps) {
           <Typograpgy className="filterText"> Weaponsmithing</Typograpgy>
         )}
       </ToggleButton>
-      <ToggleButton className="filterButton" value="Weaving">
+      <ToggleButton
+        className="filterButton"
+        value="Weaving"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/weaving.svg"
@@ -90,7 +120,11 @@ function RecipeFilter(props: RecipeFilterProps) {
         />
         {matches && <Typograpgy className="filterText"> Weaving</Typograpgy>}
       </ToggleButton>
-      <ToggleButton className="filterButton" value="Woodworking">
+      <ToggleButton
+        className="filterButton"
+        value="Woodworking"
+        style={matches ? { minWidth: buttonMinimumWidth } : {}}
+      >
         <img
           className="filterIcon"
           src="./icons/woodworking.svg"
