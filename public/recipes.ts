@@ -58,7 +58,7 @@ const recipes = [
     base_recipe: true,
     crafting_category: "Leatherworking",
     output: "Coarse Leather",
-    components: ["Rawhide Scraps", "Rawhide Scraps", "Rawhide Scraps"],
+    components: ["Rawhide", "Rawhide", "Rawhide", "Rawhide"],
     category_components: [],
   },
   {
